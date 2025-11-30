@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beeline_Social Media Management</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Styles/Services_Social Media Management.css">
+</head>
+<body>
+
+
+<!-- ==================== CUSTOM CURSOR ==================== -->
+    <div class="custom-cursor" id="customCursor">
+        <img src="Images/Cursor_01.png" alt="Buzz Default" class="cursor-buzz-default">
+        <img src="Images/Cursor_02.png" alt="Buzz Hover" class="cursor-buzz-hover">
+    </div>
+
+
+<!-- ==================== NAVIGATION BAR ==================== -->
+    <header class="header">
+    <div class="nav-container">
+        <a href="Index.html" class="logo">
+            <img src="Images/Beeline_Logo.svg" alt="Beeline Logo">
+        </a>
+
+        <nav>
+            <ul class="nav-links desktop-only">
+                <li><a href="Index.html"><span class="nav-bg"></span><span class="text-wrap"><span class="text-inner">HOME</span><span class="text-inner">HOME</span></span></a></li>
+                <li><a href="About Us.html"><span class="nav-bg"></span><span class="text-wrap"><span class="text-inner">ABOUT US</span><span class="text-inner">ABOUT US</span></span></a></li>
+                
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" class="service-trigger" style="cursor: default;">
+                        <span class="nav-bg"></span>
+                        <span class="text-wrap">
+                            <span class="text-inner" style="color: #964f33;">SERVICES</span>
+                            <span class="text-inner">SERVICES</span>
+                        </span>
+                        <i class="fa-solid fa-caret-down nav-arrow"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Services_Branding.html">Branding</a></li>
+                        <li><a href="Services_Website Design.html">Website Design</a></li>
+                        <li><a href="Services_Social Media Management.html" style="color: #F9A826;">Social Media Management</a></li>
+                        <li><a href="Services_Influencer Collaboration.html">Influencer Collaboration</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="Portfolio.html"><span class="nav-bg"></span><span class="text-wrap"><span class="text-inner">PORTFOLIO</span><span class="text-inner">PORTFOLIO</span></span></a></li>
+                <li><a href="Get in Touch.html"><span class="nav-bg"></span><span class="text-wrap"><span class="text-inner">GET IN TOUCH</span><span class="text-inner">GET IN TOUCH</span></span></a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-right"> 
+            
+            <div class="lang-wrapper">
+                <button class="lang-btn">
+                    <img src="Images/Icon_Translate.webp" alt="Language Switcher" class="lang-png-icon">
+                    <i class="fa-solid fa-caret-down nav-arrow"></i>
+                </button>
+                <ul class="dropdown-menu lang-menu-override">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Chinese</a></li>
+                    <li><a href="#">Malay</a></li>
+                </ul>
+            </div>
+
+            <div class="search-box desktop-only">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="SEARCH PROJECTS" autocomplete="off">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <div class="hamburger mobile-only" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mobile-menu-sidebar" id="mobileMenuSidebar">
+        
+        <div class="mobile-sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="sidebarSearchInput" placeholder="Search projects..." autocomplete="off">
+            <div class="search-results" id="sidebarSearchResults"></div>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="About Us.html">ABOUT US</a></li>
+            
+            <li class="mobile-has-submenu">
+                <a href="javascript:void(0)" style="color: #964f33;">SERVICES <i class="fas fa-caret-down"></i></a>
+                
+                <div class="submenu-grid-wrapper">
+                    <div class="submenu-inner"> 
+                        <ul class="mobile-submenu">
+                            <li><a href="Services_Branding.html">Branding</a></li>
+                            <li><a href="Services_Website Design.html">Website Design</a></li>
+                            <li><a href="Services_Social Media Management.html" style="color: #F9A826;">Social Media Management</a></li>
+                            <li><a href="Services_Influencer Collaboration.html">Influencer Collaboration</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <li><a href="Portfolio.html">PORTFOLIO</a></li>
+            <li><a href="Get in Touch.html">GET IN TOUCH</a></li>
+        </ul>
+    </div>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+</header>
+
+<main>
+
+<div class="bg-wrapper">
+<!-- ==================== hero-section ==================== -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-visual">
+                <img src="Images/Services_Social Media Management_Buzz01.gif" alt="Beeline Branding Mascot" class="hero-mascot" >
+            </div>
+            <div class="hero-content">
+                <h1>Social Media Management</h1>
+                <p class="hero-desc">
+                    We manage your social media by creating and posting engaging
+content that resonates with your audience and reflects your brand. We
+handle everything from planning posts, creating visuals, and writing
+captions to engaging with followers, monitoring performance, and
+adjusting strategies to maximize reach and engagement. 
+                </p>
+                <p class="hero-desc">
+                    Our goal is to build a strong online presence for your brand, boost
+engagement, and drive real results.
+                </p>
+                    <a href="Portfolio.html" class="btn btn-primary">
+                    <span class="btn-bg"></span>
+                    <span class="text-wrap">
+                        <span class="text-inner">View Our Work</span>
+                        <span class="text-inner">View Our Work</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ==================== platform-section ==================== -->   
+<section class="platform-section">
+        <div class="container">
+            <div class="platform-grid">
+                <div class="platform-item">
+                    <img src="Images/Services_Social Media Management_Platform01.png" alt="Platform 1">
+                </div>
+                <div class="platform-item">
+                    <img src="Images/Services_Social Media Management_Platform02.png" alt="Platform 2">
+                </div>
+                <div class="platform-item">
+                    <img src="Images/Services_Social Media Management_Platform03.png" alt="Platform 3">
+                </div>
+                <div class="platform-item">
+                    <img src="Images/Services_Social Media Management_Platform04.png" alt="Platform 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- ==================== process-section ==================== -->
+    <section class="process-section">
+        <div class="container">
+            <div class="process-wrapper">
+                <svg class="bee-track-svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+                    <path id="beePath" d="M-200 50 L 1500,50" fill="none" stroke="transparent" />
+                </svg>
+
+                <div class="flying-bee" id="flyingBee">
+                    <img src="Images/Services_Branding_Buzz02.png" alt="Flying Bee">
+                </div>
+
+                <div class="steps-container-new">
+                    <div class="process-step-item" data-step="0">
+                        <div class="step-icon-box"><img src="Images/Services_Social Media Management_Icon01.png"></div>
+                        <p class="step-title">Strategy<br>Development</p>
+                    </div>
+
+                    <div class="process-arrow-connector">
+                        <svg class="play-arrow-svg" viewBox="0 0 100 100">
+                            <polygon points="0,0 100,50 0,100" fill="#e27d3a"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step-item" data-step="1">
+                        <div class="step-icon-box"><img src="Images/Services_Social Media Management_Icon02.png"></div>
+                        <p class="step-title">Content<br>Creation</p>
+                    </div>
+
+                    <div class="process-arrow-connector">
+                        <svg class="play-arrow-svg" viewBox="0 0 100 100">
+                            <polygon points="0,0 100,50 0,100" fill="#e27d3a"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step-item" data-step="2">
+                        <div class="step-icon-box"><img src="Images/Services_Social Media Management_Icon03.png"></div>
+                        <p class="step-title">Scheduling &<br>Posting</p>
+                    </div>
+
+                    <div class="process-arrow-connector">
+                        <svg class="play-arrow-svg" viewBox="0 0 100 100">
+                            <polygon points="0,0 100,50 0,100" fill="#e27d3a"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step-item" data-step="3">
+                        <div class="step-icon-box"><img src="Images/Services_Social Media Management_Icon04.png"></div>
+                        <p class="step-title">Engagement<br></p>
+                    </div>
+
+                    <div class="process-arrow-connector">
+                        <svg class="play-arrow-svg" viewBox="0 0 100 100">
+                            <polygon points="0,0 100,50 0,100" fill="#e27d3a"/>
+                        </svg>
+                    </div>
+
+                    <div class="process-step-item" data-step="4">
+                        <div class="step-icon-box"><img src="Images/Services_Social Media Management_Icon05.png"></div>
+                        <p class="step-title">Performance<br>Monitoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ==================== cta-section ==================== -->
+    <section class="cta-section">
+        <div class="cta-arrow-visual">
+            <svg class="chevron-shape chevron-left" viewBox="0 0 140 200" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0 L 80 0 L 140 100 L 80 200 L 0 200 L 60 100 Z" fill="currentColor"/>
+            </svg>
+
+            <svg class="chevron-shape chevron-mid" viewBox="0 0 140 200" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0 L 80 0 L 140 100 L 80 200 L 0 200 L 60 100 Z" fill="currentColor"/>
+            </svg>
+
+            <svg class="chevron-shape chevron-right" viewBox="0 0 140 200" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M 0 0 L 80 0 L 140 100 L 80 200 L 0 200 L 60 100 Z" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <div class="cta-layout-container">
+            <div class="cta-content-left">
+                <h2>Are you ready to manage your
+social media like a pro?</h2>
+            </div>
+            <div class="cta-content-right">
+                <a href="Get in Touch.html" class="btn btn-secondary">
+                    <span class="btn-bg"></span>
+                    <span class="text-wrap">
+                        <span class="text-inner">Customize</span>
+                        <span class="text-inner">Customize</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    </div>
+</main>
+
+
+<!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            
+            <div class="footer-nav">
+                <a href="Index.html">Home</a>
+                <span class="nav-separator">|</span>
+                <a href="About Us.html">About Us</a>
+                <span class="nav-separator">|</span>
+                <a href="Services_Social Media Management.html" style="color: white;">Services</a>
+                <span class="nav-separator">|</span>
+                <a href="Portfolio.html">Portfolio</a>
+                <span class="nav-separator">|</span>
+                <a href="Get in Touch.html">Get in Touch</a>
+            </div>
+
+            <div class="footer-content-row">
+                
+                <div class="footer-col-item footer-logo-col">
+                    <div class="footer-logo">
+                        <a href="Index.html"><img src="Images/Beeline_Logo02.svg" alt="Beeline Logo"></a>
+                </div>
+                    </div>
+
+                <div class="footer-col-item footer-contact-col">
+                    <div class="contact-wrapper">
+                        <div class="contact-top-row">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>PHONE</span>
+                        </div>
+                        <p>+6 012 3456789</p>
+                    </div>
+                </div>
+
+                <div class="footer-col-item footer-contact-col">
+                    <div class="contact-wrapper">
+                        <div class="contact-top-row">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>EMAIL</span>
+                        </div>
+                        <p>Beeline123@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-col-item footer-social-col">
+                    <div class="footer-social-icons">
+                        <a href="https://www.xiaohongshu.com/user/profile/64969c58000000002a037eef" aria-label="Xiaohongshu" target="_blank">
+                            <svg class="footer-svg-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                                <title>Xiaohongshu</title>
+                                <path d="M22.405 9.879c0.002 0.016 0.01 0.02 0.07 0.019h0.725a0.797 0.797 0 0 0 0.78 -0.972 0.794 0.794 0 0 0 -0.884 -0.618 0.795 0.795 0 0 0 -0.692 0.794c0 0.101 -0.002 0.666 0.001 0.777zm-11.509 4.808c-0.203 0.001 -1.353 0.004 -1.685 0.003a2.528 2.528 0 0 1 -0.766 -0.126 0.025 0.025 0 0 0 -0.03 0.014L7.7 16.127a0.025 0.025 0 0 0 0.01 0.032c0.111 0.06 0.336 0.124 0.495 0.124 0.66 0.01 1.32 0.002 1.981 0 0.01 0 0.02 -0.006 0.023 -0.015l0.712 -1.545a0.025 0.025 0 0 0 -0.024 -0.036zM0.477 9.91c-0.071 0 -0.076 0.002 -0.076 0.01a0.834 0.834 0 0 0 -0.01 0.08c-0.027 0.397 -0.038 0.495 -0.234 3.06 -0.012 0.24 -0.034 0.389 -0.135 0.607 -0.026 0.057 -0.033 0.042 0.003 0.112 0.046 0.092 0.681 1.523 0.787 1.74 0.008 0.015 0.011 0.02 0.017 0.02 0.008 0 0.033 -0.026 0.047 -0.044 0.147 -0.187 0.268 -0.391 0.371 -0.606 0.306 -0.635 0.44 -1.325 0.486 -1.706 0.014 -0.11 0.021 -0.22 0.03 -0.33l0.204 -2.616 0.022 -0.293c0.003 -0.029 0 -0.033 -0.03 -0.034zm7.203 3.757a1.427 1.427 0 0 1 -0.135 -0.607c-0.004 -0.084 -0.031 -0.39 -0.235 -3.06a0.443 0.443 0 0 0 -0.01 -0.082c-0.004 -0.011 -0.052 -0.008 -0.076 -0.008h-1.48c-0.03 0.001 -0.034 0.005 -0.03 0.034l0.021 0.293c0.076 0.982 0.153 1.964 0.233 2.946 0.05 0.4 0.186 1.085 0.487 1.706 0.103 0.215 0.223 0.419 0.37 0.606 0.015 0.018 0.037 0.051 0.048 0.049 0.02 -0.003 0.742 -1.642 0.804 -1.765 0.036 -0.07 0.03 -0.055 0.003 -0.112zm3.861 -0.913h-0.872a0.126 0.126 0 0 1 -0.116 -0.178l1.178 -2.625a0.025 0.025 0 0 0 -0.023 -0.035l-1.318 -0.003a0.148 0.148 0 0 1 -0.135 -0.21l0.876 -1.954a0.025 0.025 0 0 0 -0.023 -0.035h-1.56c-0.01 0 -0.02 0.006 -0.024 0.015l-0.926 2.068c-0.085 0.169 -0.314 0.634 -0.399 0.938a0.534 0.534 0 0 0 -0.02 0.191 0.46 0.46 0 0 0 0.23 0.378 0.981 0.981 0 0 0 0.46 0.119h0.59c0.041 0 -0.688 1.482 -0.834 1.972a0.53 0.53 0 0 0 -0.023 0.172 0.465 0.465 0 0 0 0.23 0.398c0.15 0.092 0.342 0.12 0.475 0.12l1.66 -0.001c0.01 0 0.02 -0.006 0.023 -0.015l0.575 -1.28a0.025 0.025 0 0 0 -0.024 -0.035zm-6.93 -4.937H3.1a0.032 0.032 0 0 0 -0.034 0.033c0 1.048 -0.01 2.795 -0.01 6.829 0 0.288 -0.269 0.262 -0.28 0.262h-0.74c-0.04 0.001 -0.044 0.004 -0.04 0.047 0.001 0.037 0.465 1.064 0.555 1.263 0.01 0.02 0.03 0.033 0.051 0.033 0.157 0.003 0.767 0.009 0.938 -0.014 0.153 -0.02 0.3 -0.06 0.438 -0.132 0.3 -0.156 0.49 -0.419 0.595 -0.765 0.052 -0.172 0.075 -0.353 0.075 -0.533 0.002 -2.33 0 -4.66 -0.007 -6.991a0.032 0.032 0 0 0 -0.032 -0.032zm11.784 6.896c0 -0.014 -0.01 -0.021 -0.024 -0.022h-1.465c-0.048 -0.001 -0.049 -0.002 -0.05 -0.049v-4.66c0 -0.072 -0.005 -0.07 0.07 -0.07h0.863c0.08 0 0.075 0.004 0.075 -0.074V8.393c0 -0.082 0.006 -0.076 -0.08 -0.076h-3.5c-0.064 0 -0.075 -0.006 -0.075 0.073v1.445c0 0.083 -0.006 0.077 0.08 0.077h0.854c0.075 0 0.07 -0.004 0.07 0.07v4.624c0 0.095 0.008 0.084 -0.085 0.084 -0.37 0 -1.11 -0.002 -1.304 0 -0.048 0.001 -0.06 0.03 -0.06 0.03l-0.697 1.519s-0.014 0.025 -0.008 0.036c0.006 0.01 0.013 0.008 0.058 0.008 1.748 0.003 3.495 0.002 5.243 0.002 0.03 -0.001 0.034 -0.006 0.035 -0.033v-1.539zm4.177 -3.43c0 0.013 -0.007 0.023 -0.02 0.024 -0.346 0.006 -0.692 0.004 -1.037 0.004 -0.014 -0.002 -0.022 -0.01 -0.022 -0.024 -0.005 -0.434 -0.007 -0.869 -0.01 -1.303 0 -0.072 -0.006 -0.071 0.07 -0.07l0.733 -0.003c0.041 0 0.081 0.002 0.12 0.015 0.093 0.025 0.16 0.107 0.165 0.204 0.006 0.431 0.002 1.153 0.001 1.153zm2.67 0.244a1.953 1.953 0 0 0 -0.883 -0.222h-0.18c-0.04 -0.001 -0.04 -0.003 -0.042 -0.04V10.21c0 -0.132 -0.007 -0.263 -0.025 -0.394a1.823 1.823 0 0 0 -0.153 -0.53 1.533 1.533 0 0 0 -0.677 -0.71 2.167 2.167 0 0 0 -1 -0.258c-0.153 -0.003 -0.567 0 -0.72 0 -0.07 0 -0.068 0.004 -0.068 -0.065V7.76c0 -0.031 -0.01 -0.041 -0.046 -0.039H17.93s-0.016 0 -0.023 0.007c-0.006 0.006 -0.008 0.012 -0.008 0.023v0.546c-0.008 0.036 -0.057 0.015 -0.082 0.022h-0.95c-0.022 0.002 -0.028 0.008 -0.03 0.032v1.481c0 0.09 -0.004 0.082 0.082 0.082h0.913c0.082 0 0.072 0.128 0.072 0.128v1.148s0.003 0.117 -0.06 0.117h-1.482c-0.068 0 -0.06 0.082 -0.06 0.082v1.445s-0.01 0.068 0.064 0.068h1.457c0.082 0 0.076 -0.006 0.076 0.079v3.225c0 0.088 -0.007 0.081 0.082 0.081h1.43c0.09 0 0.082 0.007 0.082 -0.08v-3.27c0 -0.029 0.006 -0.035 0.033 -0.035l2.323 -0.003c0.098 0 0.191 0.02 0.28 0.061a0.46 0.46 0 0 1 0.274 0.407c0.008 0.395 0.003 0.79 0.003 1.185 0 0.259 -0.107 0.367 -0.33 0.367h-1.218c-0.023 0.002 -0.029 0.008 -0.028 0.033 0.184 0.437 0.374 0.871 0.57 1.303a0.045 0.045 0 0 0 0.04 0.026c0.17 0.005 0.34 0.002 0.51 0.003 0.15 -0.002 0.517 0.004 0.666 -0.01a2.03 2.03 0 0 0 0.408 -0.075c0.59 -0.18 0.975 -0.698 0.976 -1.313v-1.981c0 -0.128 -0.01 -0.254 -0.034 -0.38 0 0.078 -0.029 -0.641 -0.724 -0.998z" fill="#505050" stroke-width="1"></path>
+                            </svg>
+                        </a>
+                        <a href="http://tiktok.com/@beeline.my" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/beeline_my_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61564906472455" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <p class="copyright-text">©beelineby2024, All Rights Reserved</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+<!-- ==================== FLOAT WHATSAPP ==================== -->
+    <a href="https://web.whatsapp.com/" class="whatsapp-float" target="_blank">
+        <svg class="whatsapp-curved-text" viewBox="0 0 100 100">
+            <path id="curve" d="M 5, 55 A 45,45 0 0 1 95, 55" fill="none"/>
+            <text width="100">
+                <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle">
+                    Ask us now
+                </textPath>
+            </text>
+        </svg>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+<!-- ==================== SCRIPT ==================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <script src="Scripts/Services_Social Media Management.js"></script>
+
+</body>
+</html>
