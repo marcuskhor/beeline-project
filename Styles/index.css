@@ -526,7 +526,7 @@ img { max-width: 100%; height: auto; }
 .hero-main-scene-shape-img { width: 100%; max-width: 800px; height: auto; object-fit: contain; position: relative; display: block; margin: 0 auto; z-index: 10; }
 
 /* 漂浮元素 */
-.float-element { position: absolute; z-index: 15; }
+.float-element { position: absolute; z-index: 15; transform-origin: top left; will-change: transform; }
 .float-element-inner { width: 100%; height: auto; object-fit: contain; position: absolute; top: 0; left: 0; }
 
 /* 漂浮物定位 */
@@ -2317,6 +2317,11 @@ body.no-scroll {
     .footer-nav a {
         font-size: 0.6rem;   /* 字体稍微改小 */
         letter-spacing: 0.1rem;
+    }
+
+    /* Fix: keep float elements anchored visually when scaled on small screens */
+    .hero-image-animated .float-element {
+        transform-origin: center center; /* avoid left-shift illusion when scaling */
     }
 
     /* 3. 内容区域：保持 Row 模式，但强制换行形成三排 */
