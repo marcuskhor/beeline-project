@@ -1,88 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* Beeline Brand Colors */
+    --brand-yellow: 39 96% 56%;
+    --brand-blue: 227 76% 38%;
+    --accent-orange: 22 74% 56%;
+    --text-main: 0 0% 31%;
+    --text-brown: 18 49% 39%;
+    --text-light: 0 0% 33%;
+    --bg-peach: 30 100% 95%;
+    
+    /* Shadcn semantic tokens mapped to Beeline */
+    --background: 30 100% 95%;
+    --foreground: 0 0% 31%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 0 0% 31%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 0 0% 31%;
+    --primary: 39 96% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 227 76% 38%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 30 30% 90%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 22 74% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 22 74% 56%;
+    --input: 30 30% 85%;
+    --ring: 39 96% 56%;
+    --radius: 1rem;
+    
+    /* Custom shadows */
+    --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    --hover-shadow: 0 4px 10px rgba(249, 168, 38, 0.3);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 20 14% 10%;
+    --foreground: 30 20% 90%;
+    --card: 20 14% 14%;
+    --card-foreground: 30 20% 90%;
+    --popover: 20 14% 14%;
+    --popover-foreground: 30 20% 90%;
+    --primary: 39 96% 56%;
+    --primary-foreground: 20 14% 10%;
+    --secondary: 227 76% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 20 14% 20%;
+    --muted-foreground: 30 20% 70%;
+    --accent: 22 74% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 14% 25%;
+    --input: 20 14% 25%;
+    --ring: 39 96% 56%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -98,8 +86,198 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
     @apply bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+/* Button animations */
+.btn-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-animated .btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 1;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.5s ease;
+}
+
+.btn-animated:hover .btn-bg {
+  clip-path: circle(75% at 50% 50%);
+}
+
+.btn-animated .text-wrap {
+  position: relative;
+  z-index: 2;
+  height: 1.4em;
+  overflow: hidden;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-animated .text-inner {
+  white-space: nowrap;
+  display: block;
+  line-height: 1.4em;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-animated .text-inner:nth-child(2) {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.btn-animated:hover .text-inner:nth-child(1) {
+  transform: translateY(-100%);
+}
+
+.btn-animated:hover .text-inner:nth-child(2) {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+}
+
+/* Float animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+.float-element {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-element:nth-child(2) { animation-delay: 0.2s; }
+.float-element:nth-child(3) { animation-delay: 0.4s; }
+.float-element:nth-child(4) { animation-delay: 0.6s; }
+.float-element:nth-child(5) { animation-delay: 0.8s; }
+.float-element:nth-child(6) { animation-delay: 1s; }
+.float-element:nth-child(7) { animation-delay: 1.2s; }
+.float-element:nth-child(8) { animation-delay: 1.4s; }
+.float-element:nth-child(9) { animation-delay: 1.6s; }
+.float-element:nth-child(10) { animation-delay: 1.8s; }
+
+/* Dropdown animations */
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-trigger:hover .dropdown-menu,
+.dropdown-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover img {
+  transform: scale(1.1);
+}
+
+/* Intro modal */
+.intro-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 400px;
+  text-align: center;
+  animation: modalEnter 0.5s ease;
+}
+
+@keyframes modalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Marquee scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-scroll {
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Spin slow for WhatsApp text */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
