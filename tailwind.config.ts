@@ -74,6 +74,9 @@ export default {
           brown: "hsl(var(--text-brown))",
           light: "hsl(var(--text-light))",
         },
+        cream: "hsl(var(--cream))",
+        highlight: "hsl(var(--highlight))",
+        "text-brown": "hsl(var(--text-brown))",
       },
       borderRadius: {
         lg: "var(--radius)",
