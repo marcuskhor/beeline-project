@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { getAssetPath } from "@/lib/assets";
 
 const tabs = [
   { id: "branding", label: "Branding" },
@@ -14,36 +15,36 @@ const tabs = [
 
 const portfolioItems = {
   branding: [
-    { id: 1, title: "DE CREATIVE", subtitle: "Rebranding", image: "/Images/Portfolio_Branding_01.png", link: "/portfolio/branding/de-creative" },
-    { id: 2, title: "Brand 02", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 3, title: "Brand 03", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 4, title: "Brand 04", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 5, title: "Brand 05", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 6, title: "Brand 06", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
+    { id: 1, title: "DE CREATIVE", subtitle: "Rebranding", image: "Images/Portfolio_Branding_01.png", link: "/portfolio/branding/de-creative" },
+    { id: 2, title: "Brand 02", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 3, title: "Brand 03", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 4, title: "Brand 04", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 5, title: "Brand 05", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 6, title: "Brand 06", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
   ],
   website: [
-    { id: 1, title: "QUBE", subtitle: "Website Design", image: "/Images/Portfolio_Website Design_01.png", link: "/portfolio/website/qube" },
-    { id: 2, title: "ZIDS", subtitle: "Website Design", image: "/Images/Portfolio_Website Design_02.png", link: "/portfolio/website/zids" },
-    { id: 3, title: "Brand 03", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 4, title: "Brand 04", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 5, title: "Brand 05", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 6, title: "Brand 06", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
+    { id: 1, title: "QUBE", subtitle: "Website Design", image: "Images/Portfolio_Website Design_01.png", link: "/portfolio/website/qube" },
+    { id: 2, title: "ZIDS", subtitle: "Website Design", image: "Images/Portfolio_Website Design_02.png", link: "/portfolio/website/zids" },
+    { id: 3, title: "Brand 03", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 4, title: "Brand 04", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 5, title: "Brand 05", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 6, title: "Brand 06", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
   ],
   social: [
-    { id: 1, title: "LEHAO", subtitle: "Social Media Management", image: "/Images/Portfolio_Social Media Management_01.png", link: "/portfolio/social/lehao" },
-    { id: 2, title: "Brand 02", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 3, title: "Brand 03", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 4, title: "Brand 04", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 5, title: "Brand 05", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 6, title: "Brand 06", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
+    { id: 1, title: "LEHAO", subtitle: "Social Media Management", image: "Images/Portfolio_Social Media Management_01.png", link: "/portfolio/social/lehao" },
+    { id: 2, title: "Brand 02", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 3, title: "Brand 03", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 4, title: "Brand 04", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 5, title: "Brand 05", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 6, title: "Brand 06", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
   ],
   influencer: [
-    { id: 1, title: "Campaign 01", subtitle: "Influencer Collaboration", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 2, title: "Campaign 02", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 3, title: "Campaign 03", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 4, title: "Campaign 04", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 5, title: "Campaign 05", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
-    { id: 6, title: "Campaign 06", subtitle: "Description", image: "/Images/Portfolio_Images.jpg", link: "#" },
+    { id: 1, title: "Campaign 01", subtitle: "Influencer Collaboration", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 2, title: "Campaign 02", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 3, title: "Campaign 03", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 4, title: "Campaign 04", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 5, title: "Campaign 05", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
+    { id: 6, title: "Campaign 06", subtitle: "Description", image: "Images/Portfolio_Images.jpg", link: "#" },
   ],
 };
 
@@ -125,7 +126,7 @@ export default function PortfolioPage() {
                       className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg"
                     >
                       <img
-                        src={item.image}
+                        src={getAssetPath(item.image)}
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />

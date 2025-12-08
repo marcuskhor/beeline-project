@@ -1,29 +1,30 @@
 import { Link } from "react-router-dom";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const results = [
   {
     id: 1,
     title: "Branding",
-    icon: "/Images/Services_Buzz01.gif",
+    icon: "Images/Services_Buzz01.gif",
     link: "/portfolio?category=branding",
   },
   {
     id: 2,
     title: "Website Design",
-    icon: "/Images/Services_Buzz03.gif",
+    icon: "Images/Services_Buzz03.gif",
     link: "/portfolio?category=website",
   },
   {
     id: 3,
     title: "Social Media Management",
-    icon: "/Images/Services_Buzz04.gif",
+    icon: "Images/Services_Buzz04.gif",
     link: "/portfolio?category=social-media",
   },
   {
     id: 4,
     title: "Influencer Collaboration",
-    icon: "/Images/Services_Buzz02.gif",
+    icon: "Images/Services_Buzz02.gif",
     link: "/portfolio?category=influencer",
   },
 ];
@@ -52,7 +53,7 @@ export const ResultsSection = () => {
               >
                 <div className="w-24 h-24 mx-auto mb-4">
                   <img
-                    src={result.icon}
+                    src={getAssetPath(result.icon)}
                     alt={result.title}
                     className="w-full h-full object-contain"
                   />
