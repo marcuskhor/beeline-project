@@ -5,13 +5,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const teamMembers = [
-  { name: "Manson", role: "Founder & Visionary", image: "/Images/AboutUs_Manson.png" },
-  { name: "Lyn", role: "Creative Director", image: "/Images/AboutUs_Lyn.png" },
-  { name: "Yuki", role: "Talent Marketing Manager", image: "/Images/AboutUs_Yuki.png" },
-  { name: "Kiki", role: "Content Strategist", image: "/Images/AboutUs_Kiki.png" },
-  { name: "Yuanqi", role: "Content Strategist", image: "/Images/AboutUs_Yuanqi.png" },
+  { name: "Manson", role: "Founder & Visionary", image: "Images/AboutUs_Manson.png" },
+  { name: "Lyn", role: "Creative Director", image: "Images/AboutUs_Lyn.png" },
+  { name: "Yuki", role: "Talent Marketing Manager", image: "Images/AboutUs_Yuki.png" },
+  { name: "Kiki", role: "Content Strategist", image: "Images/AboutUs_Kiki.png" },
+  { name: "Yuanqi", role: "Content Strategist", image: "Images/AboutUs_Yuanqi.png" },
 ];
 
 const coreValues = [
@@ -22,18 +23,18 @@ const coreValues = [
 ];
 
 const buzzPoses = [
-  "/Images/AboutUs_Page3_Buzz02.png",
-  "/Images/AboutUs_Page3_Buzz03.png",
-  "/Images/AboutUs_Page3_Buzz04.png",
-  "/Images/AboutUs_Page3_Buzz05.png",
-  "/Images/AboutUs_Page3_Buzz06.png",
-  "/Images/AboutUs_Page3_Buzz07.png",
-  "/Images/AboutUs_Page3_Buzz08.png",
-  "/Images/AboutUs_Page3_Buzz09.png",
-  "/Images/AboutUs_Page3_Buzz10.png",
-  "/Images/AboutUs_Page3_Buzz11.png",
-  "/Images/AboutUs_Page3_Buzz12.png",
-  "/Images/AboutUs_Page3_Buzz13.png",
+  "Images/AboutUs_Page3_Buzz02.png",
+  "Images/AboutUs_Page3_Buzz03.png",
+  "Images/AboutUs_Page3_Buzz04.png",
+  "Images/AboutUs_Page3_Buzz05.png",
+  "Images/AboutUs_Page3_Buzz06.png",
+  "Images/AboutUs_Page3_Buzz07.png",
+  "Images/AboutUs_Page3_Buzz08.png",
+  "Images/AboutUs_Page3_Buzz09.png",
+  "Images/AboutUs_Page3_Buzz10.png",
+  "Images/AboutUs_Page3_Buzz11.png",
+  "Images/AboutUs_Page3_Buzz12.png",
+  "Images/AboutUs_Page3_Buzz13.png",
 ];
 
 export default function AboutPage() {
@@ -98,7 +99,7 @@ export default function AboutPage() {
 
                   <div className="relative">
                     <img 
-                      src="/Images/AboutUs_Page1.webp" 
+                      src={getAssetPath("Images/AboutUs_Page1.webp")} 
                       alt="Bee Blueprint" 
                       className="w-full max-w-md mx-auto animate-float"
                     />
@@ -129,7 +130,7 @@ export default function AboutPage() {
                   {[1, 2, 3, 4].map((num, idx) => (
                     <div key={num} className="flex items-center gap-4">
                       <div className="w-20 h-20 bg-card rounded-2xl shadow-lg flex items-center justify-center p-2">
-                        <img src={`/Images/AboutUs_Page2_Logo0${num}.png`} alt={`Logo Step ${num}`} className="w-full h-full object-contain" />
+                        <img src={getAssetPath(`Images/AboutUs_Page2_Logo0${num}.png`)} alt={`Logo Step ${num}`} className="w-full h-full object-contain" />
                       </div>
                       {idx < 3 && <ChevronRight className="w-6 h-6 text-primary" />}
                     </div>
@@ -191,7 +192,7 @@ export default function AboutPage() {
                   <div>
                     <div className="flex items-center gap-4 mb-6">
                       <h1 className="text-5xl md:text-6xl font-bold text-foreground">BUZZ</h1>
-                      <img src="/Images/AboutUs_Page3_Buzz01.png" alt="Buzz Mascot" className="w-24 h-24 object-contain" />
+                      <img src={getAssetPath("Images/AboutUs_Page3_Buzz01.png")} alt="Buzz Mascot" className="w-24 h-24 object-contain" />
                     </div>
                     <div className="space-y-4 mb-8">
                       <p className="text-muted-foreground">Beeline's IP character, Buzz, is an adorable little bee: hardworking, capable, and always united with the hive.</p>
@@ -199,7 +200,7 @@ export default function AboutPage() {
                     </div>
                     <div>
                       <h4 className="font-bold text-sm mb-4 text-foreground">THREE VIEWS</h4>
-                      <img src="/Images/AboutUs_Page3_View.png" alt="Buzz Views" className="w-full max-w-sm" />
+                      <img src={getAssetPath("Images/AboutUs_Page3_View.png")} alt="Buzz Views" className="w-full max-w-sm" />
                       <div className="flex justify-around max-w-sm text-sm text-muted-foreground mt-2">
                         <span>FRONT</span>
                         <span>BACK</span>
@@ -215,7 +216,7 @@ export default function AboutPage() {
                         className="bg-card rounded-xl p-2 shadow-md hover:scale-105 transition-transform"
                         style={{ animationDelay: `${idx * 0.05}s` }}
                       >
-                        <img src={pose} alt={`Buzz Pose ${idx + 1}`} className="w-full h-full object-contain" />
+                        <img src={getAssetPath(pose)} alt={`Buzz Pose ${idx + 1}`} className="w-full h-full object-contain" />
                       </div>
                     ))}
                   </div>
@@ -247,7 +248,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="order-1 lg:order-2 flex justify-center">
-                <img src="/Images/AboutUs_ Buzz01.png" alt="Mission Bee" className="w-64 h-64 object-contain animate-float" />
+                <img src={getAssetPath("Images/AboutUs_ Buzz01.png")} alt="Mission Bee" className="w-64 h-64 object-contain animate-float" />
               </div>
             </div>
 
@@ -286,7 +287,7 @@ export default function AboutPage() {
                   <div key={idx} className="text-center group">
                     <div className="relative mb-4 overflow-hidden rounded-2xl">
                       <img 
-                        src={member.image} 
+                        src={getAssetPath(member.image)} 
                         alt={member.name}
                         className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
                       />

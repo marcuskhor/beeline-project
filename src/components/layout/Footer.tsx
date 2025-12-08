@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getAssetPath } from "@/lib/assets";
 
 export const Footer = () => {
   return (
@@ -8,7 +9,7 @@ export const Footer = () => {
           {/* Logo & Description */}
           <div>
             <img 
-              src="/Images/Beeline_Logo02.svg" 
+              src={getAssetPath("Images/Beeline_Logo02.svg")} 
               alt="Beeline Logo" 
               className="h-8 w-auto mb-4 brightness-0 invert"
             />
