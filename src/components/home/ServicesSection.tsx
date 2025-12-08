@@ -102,66 +102,66 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - 250px width like reference, clustered around main image */}
-          {/* Bee 1 - laptop bee, left side of image */}
+          {/* Floating Bees - clustered tightly around main image like reference */}
+          {/* Bee 1 - laptop bee, left side overlapping image edge */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", top: "22%", left: "-18%" }}
+            style={{ width: "200px", top: "25%", left: "2%" }}
           />
-          {/* Bee 2 - palette bee, top right area */}
+          {/* Bee 2 - palette bee, top area above image */}
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] float-element"
-            style={{ width: "225px", top: "-12%", right: "8%", animationDelay: "0.1s" }}
+            style={{ width: "170px", top: "-5%", left: "38%", animationDelay: "0.1s" }}
           />
-          {/* Bee 3 - phone bee, right side */}
+          {/* Bee 3 - phone bee, right side overlapping image edge */}
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", top: "5%", right: "-20%", animationDelay: "0.2s" }}
+            style={{ width: "180px", top: "12%", right: "5%", animationDelay: "0.2s" }}
           />
           {/* Bee 4 - camera bee, bottom center overlapping image */}
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", bottom: "12%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.3s" }}
+            style={{ width: "200px", bottom: "15%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.3s" }}
           />
 
-          {/* Floating Hearts - 50px width like reference, around bottom sides */}
+          {/* Floating Hearts - positioned around bottom edges of image */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "45%", left: "-5%", animationDelay: "0.2s" }}
+            style={{ width: "45px", top: "48%", left: "12%", animationDelay: "0.2s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 2"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "50%", right: "-3%", animationDelay: "0.3s" }}
+            style={{ width: "45px", top: "42%", right: "12%", animationDelay: "0.3s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
             alt="Heart Icon 3"
             className="absolute z-[15] float-element"
-            style={{ width: "65px", bottom: "22%", left: "0%", animationDelay: "0.4s" }}
+            style={{ width: "55px", bottom: "25%", left: "15%", animationDelay: "0.4s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
             alt="Heart Icon 4"
             className="absolute z-[15] float-element"
-            style={{ width: "85px", bottom: "18%", right: "-2%", animationDelay: "0.5s" }}
+            style={{ width: "65px", bottom: "22%", right: "10%", animationDelay: "0.5s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
             className="absolute z-[15] float-element"
-            style={{ width: "60px", bottom: "28%", right: "12%", animationDelay: "0.6s" }}
+            style={{ width: "50px", bottom: "30%", right: "22%", animationDelay: "0.6s" }}
           />
         </div>
       </div>
