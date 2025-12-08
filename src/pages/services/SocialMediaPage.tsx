@@ -3,20 +3,21 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const platforms = [
-  "/Images/Services_Social Media Management_Platform01.png",
-  "/Images/Services_Social Media Management_Platform02.png",
-  "/Images/Services_Social Media Management_Platform03.png",
-  "/Images/Services_Social Media Management_Platform04.png",
+  "Images/Services_Social Media Management_Platform01.png",
+  "Images/Services_Social Media Management_Platform02.png",
+  "Images/Services_Social Media Management_Platform03.png",
+  "Images/Services_Social Media Management_Platform04.png",
 ];
 
 const processSteps = [
-  { icon: "/Images/Services_Social Media Management_Icon01.png", title: "Strategy\nDevelopment" },
-  { icon: "/Images/Services_Social Media Management_Icon02.png", title: "Content\nCreation" },
-  { icon: "/Images/Services_Social Media Management_Icon03.png", title: "Scheduling &\nPosting" },
-  { icon: "/Images/Services_Social Media Management_Icon04.png", title: "Engagement" },
-  { icon: "/Images/Services_Social Media Management_Icon05.png", title: "Performance\nMonitoring" },
+  { icon: "Images/Services_Social Media Management_Icon01.png", title: "Strategy\nDevelopment" },
+  { icon: "Images/Services_Social Media Management_Icon02.png", title: "Content\nCreation" },
+  { icon: "Images/Services_Social Media Management_Icon03.png", title: "Scheduling &\nPosting" },
+  { icon: "Images/Services_Social Media Management_Icon04.png", title: "Engagement" },
+  { icon: "Images/Services_Social Media Management_Icon05.png", title: "Performance\nMonitoring" },
 ];
 
 export default function SocialMediaPage() {
@@ -31,7 +32,7 @@ export default function SocialMediaPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img 
-                  src="/Images/Services_Social Media Management_Buzz01.gif" 
+                  src={getAssetPath("Images/Services_Social Media Management_Buzz01.gif")} 
                   alt="Beeline Social Media Mascot" 
                   className="w-full max-w-md mx-auto"
                 />
@@ -58,7 +59,7 @@ export default function SocialMediaPage() {
             <div className="flex flex-wrap justify-center gap-8">
               {platforms.map((platform, idx) => (
                 <div key={idx} className="w-24 h-24 md:w-32 md:h-32">
-                  <img src={platform} alt={`Platform ${idx + 1}`} className="w-full h-full object-contain" />
+                  <img src={getAssetPath(platform)} alt={`Platform ${idx + 1}`} className="w-full h-full object-contain" />
                 </div>
               ))}
             </div>
@@ -73,7 +74,7 @@ export default function SocialMediaPage() {
                 <div key={idx} className="flex items-center gap-4">
                   <div className="text-center">
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-card rounded-2xl shadow-lg flex items-center justify-center mb-3 mx-auto">
-                      <img src={step.icon} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                      <img src={getAssetPath(step.icon)} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                     </div>
                     <p className="text-sm font-bold text-foreground whitespace-pre-line">{step.title}</p>
                   </div>

@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const floatingIcons = [
-  { src: "/Images/Hero_Buzz01.webp", alt: "Decorative icon 1", className: "top-0 left-0" },
-  { src: "/Images/Hero_Buzz02.webp", alt: "Decorative icon 2", className: "top-10 right-10" },
-  { src: "/Images/Hero_Facebook.webp", alt: "Facebook", className: "top-1/4 -left-8" },
-  { src: "/Images/Hero_Instagram.webp", alt: "Instagram", className: "top-1/3 -right-4" },
-  { src: "/Images/Hero_Google.webp", alt: "Google", className: "bottom-1/3 -left-12" },
-  { src: "/Images/Hero_XHS.webp", alt: "XHS", className: "bottom-1/4 right-0" },
-  { src: "/Images/Hero_Website.webp", alt: "Website", className: "bottom-10 left-10" },
-  { src: "/Images/Hero_Tiktok.webp", alt: "Tiktok", className: "top-1/2 -right-8" },
-  { src: "/Images/Hero_Messenger.webp", alt: "Messenger", className: "bottom-0 right-1/4" },
-  { src: "/Images/Hero_Whatsapp.webp", alt: "Whatsapp", className: "bottom-1/4 -left-4" },
+  { src: "Images/Hero_Buzz01.webp", alt: "Decorative icon 1", className: "top-0 left-0" },
+  { src: "Images/Hero_Buzz02.webp", alt: "Decorative icon 2", className: "top-10 right-10" },
+  { src: "Images/Hero_Facebook.webp", alt: "Facebook", className: "top-1/4 -left-8" },
+  { src: "Images/Hero_Instagram.webp", alt: "Instagram", className: "top-1/3 -right-4" },
+  { src: "Images/Hero_Google.webp", alt: "Google", className: "bottom-1/3 -left-12" },
+  { src: "Images/Hero_XHS.webp", alt: "XHS", className: "bottom-1/4 right-0" },
+  { src: "Images/Hero_Website.webp", alt: "Website", className: "bottom-10 left-10" },
+  { src: "Images/Hero_Tiktok.webp", alt: "Tiktok", className: "top-1/2 -right-8" },
+  { src: "Images/Hero_Messenger.webp", alt: "Messenger", className: "bottom-0 right-1/4" },
+  { src: "Images/Hero_Whatsapp.webp", alt: "Whatsapp", className: "bottom-1/4 -left-4" },
 ];
 
 export const HeroSection = () => {
@@ -37,7 +38,7 @@ export const HeroSection = () => {
             <div className="relative w-full aspect-square max-w-lg mx-auto">
               {/* Main Image */}
               <img
-                src="/Images/Hero_MainPic.webp"
+                src={getAssetPath("Images/Hero_MainPic.webp")}
                 alt="Beeline Hero"
                 className="w-full h-full object-contain relative z-10"
               />
@@ -50,7 +51,7 @@ export const HeroSection = () => {
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <img
-                    src={icon.src}
+                    src={getAssetPath(icon.src)}
                     alt={icon.alt}
                     className="w-full h-full object-contain"
                   />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 export const IntroModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export const IntroModal = () => {
       <div className="modal-card">
         <div className="w-24 h-24 mx-auto mb-6">
           <img
-            src="/Images/Intro_Buzz.gif"
+            src={getAssetPath("Images/Intro_Buzz.gif")}
             alt="Welcome Bee"
             className="w-full h-full object-contain"
           />

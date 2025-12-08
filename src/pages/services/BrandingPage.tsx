@@ -3,13 +3,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const processSteps = [
-  { icon: "/Images/Services_Branding_Icon01.webp", title: "Define Your\nBrand" },
-  { icon: "/Images/Services_Branding_Icon02.webp", title: "Research\nYour Audience" },
-  { icon: "/Images/Services_Branding_Icon03.webp", title: "Develop Your\nVisual Identity" },
-  { icon: "/Images/Services_Branding_Icon04.webp", title: "Create Consistent\nMessaging" },
-  { icon: "/Images/Services_Branding_Icon05.webp", title: "Implement and\nPromote" },
+  { icon: "Images/Services_Branding_Icon01.webp", title: "Define Your\nBrand" },
+  { icon: "Images/Services_Branding_Icon02.webp", title: "Research\nYour Audience" },
+  { icon: "Images/Services_Branding_Icon03.webp", title: "Develop Your\nVisual Identity" },
+  { icon: "Images/Services_Branding_Icon04.webp", title: "Create Consistent\nMessaging" },
+  { icon: "Images/Services_Branding_Icon05.webp", title: "Implement and\nPromote" },
 ];
 
 export default function BrandingPage() {
@@ -24,7 +25,7 @@ export default function BrandingPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img 
-                  src="/Images/Services_Branding_Buzz01.gif" 
+                  src={getAssetPath("Images/Services_Branding_Buzz01.gif")} 
                   alt="Beeline Branding Mascot" 
                   className="w-full max-w-md mx-auto"
                 />
@@ -53,7 +54,7 @@ export default function BrandingPage() {
                 <div key={idx} className="flex items-center gap-4">
                   <div className="text-center">
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-card rounded-2xl shadow-lg flex items-center justify-center mb-3 mx-auto">
-                      <img src={step.icon} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                      <img src={getAssetPath(step.icon)} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                     </div>
                     <p className="text-sm font-bold text-foreground whitespace-pre-line">{step.title}</p>
                   </div>

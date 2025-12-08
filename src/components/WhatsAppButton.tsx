@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/lib/assets";
+
 export const WhatsAppButton = () => {
   return (
     <a
@@ -9,7 +11,7 @@ export const WhatsAppButton = () => {
     >
       <div className="relative">
         <img
-          src="/Images/Hero_Whatsapp.webp"
+          src={getAssetPath("Images/Hero_Whatsapp.webp")}
           alt="WhatsApp"
           className="w-14 h-14 drop-shadow-lg"
         />

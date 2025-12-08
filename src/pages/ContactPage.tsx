@@ -4,13 +4,14 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ChevronDown } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import { getAssetPath } from "@/lib/assets";
 
 const socialLinks = [
-  { icon: "/Images/GetinTouch_Icon01.webp", url: "https://www.xiaohongshu.com/user/profile/64969c58000000002a037eef", alt: "Xiaohongshu" },
-  { icon: "/Images/GetinTouch_Icon02.webp", url: "http://tiktok.com/@beeline.my", alt: "TikTok" },
-  { icon: "/Images/GetinTouch_Icon03.webp", url: "https://www.instagram.com/beeline_my_/", alt: "Instagram" },
-  { icon: "/Images/GetinTouch_Icon04.webp", url: "https://www.facebook.com/profile.php?id=61564906472455", alt: "Facebook" },
-  { icon: "/Images/GetinTouch_Icon05.webp", url: "mailto:Beeline123@gmail.com", alt: "Email" },
+  { icon: "Images/GetinTouch_Icon01.webp", url: "https://www.xiaohongshu.com/user/profile/64969c58000000002a037eef", alt: "Xiaohongshu" },
+  { icon: "Images/GetinTouch_Icon02.webp", url: "http://tiktok.com/@beeline.my", alt: "TikTok" },
+  { icon: "Images/GetinTouch_Icon03.webp", url: "https://www.instagram.com/beeline_my_/", alt: "Instagram" },
+  { icon: "Images/GetinTouch_Icon04.webp", url: "https://www.facebook.com/profile.php?id=61564906472455", alt: "Facebook" },
+  { icon: "Images/GetinTouch_Icon05.webp", url: "mailto:Beeline123@gmail.com", alt: "Email" },
 ];
 
 const subjects = ["General Inquiry", "Project Proposal", "Partnership", "Other"];
@@ -53,7 +54,7 @@ export default function ContactPage() {
             <div className="flex flex-col lg:flex-row items-center justify-center gap-12">
               <div className="relative">
                 <img 
-                  src="/Images/GetinTouch_Buzz01.png" 
+                  src={getAssetPath("Images/GetinTouch_Buzz01.png")} 
                   alt="Buzz Bee" 
                   className="w-48 h-48 object-contain animate-float"
                 />
@@ -80,7 +81,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="w-16 h-16 rounded-2xl overflow-hidden shadow-lg hover:scale-110 transition-transform"
                 >
-                  <img src={social.icon} alt={social.alt} className="w-full h-full object-cover" />
+                  <img src={getAssetPath(social.icon)} alt={social.alt} className="w-full h-full object-cover" />
                 </a>
               ))}
             </div>
@@ -210,7 +211,7 @@ export default function ContactPage() {
                   <p className="text-3xl font-bold">quick response?</p>
                 </div>
                 <img 
-                  src="/Images/GetinTouch_Buzz02.png" 
+                  src={getAssetPath("Images/GetinTouch_Buzz02.png")} 
                   alt="Bee with Phone" 
                   className="w-64 h-64 mx-auto object-contain animate-float"
                 />

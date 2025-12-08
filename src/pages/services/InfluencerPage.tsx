@@ -3,13 +3,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const processSteps = [
-  { icon: "/Images/Services_Influencer Collaboraton_Icon01.png", title: "Identify the\nRight Influencers" },
-  { icon: "/Images/Services_Influencer Collaboraton_Icon02.png", title: "Strategy\nDevelopment" },
-  { icon: "/Images/Services_Influencer Collaboraton_Icon03.png", title: "Outreach &\nNegotiation" },
-  { icon: "/Images/Services_Influencer Collaboraton_Icon04.png", title: "Content Creation &\nPromotion" },
-  { icon: "/Images/Services_Influencer Collaboraton_Icon05.png", title: "Performance\nTracking & Reporting" },
+  { icon: "Images/Services_Influencer Collaboraton_Icon01.png", title: "Identify the\nRight Influencers" },
+  { icon: "Images/Services_Influencer Collaboraton_Icon02.png", title: "Strategy\nDevelopment" },
+  { icon: "Images/Services_Influencer Collaboraton_Icon03.png", title: "Outreach &\nNegotiation" },
+  { icon: "Images/Services_Influencer Collaboraton_Icon04.png", title: "Content Creation &\nPromotion" },
+  { icon: "Images/Services_Influencer Collaboraton_Icon05.png", title: "Performance\nTracking & Reporting" },
 ];
 
 export default function InfluencerPage() {
@@ -24,7 +25,7 @@ export default function InfluencerPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img 
-                  src="/Images/Services_Influencer Collaboraton_Buzz01.gif" 
+                  src={getAssetPath("Images/Services_Influencer Collaboraton_Buzz01.gif")} 
                   alt="Beeline Influencer Mascot" 
                   className="w-full max-w-md mx-auto"
                 />
@@ -53,7 +54,7 @@ export default function InfluencerPage() {
                 <div key={idx} className="flex items-center gap-4">
                   <div className="text-center">
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-card rounded-2xl shadow-lg flex items-center justify-center mb-3 mx-auto">
-                      <img src={step.icon} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                      <img src={getAssetPath(step.icon)} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                     </div>
                     <p className="text-sm font-bold text-foreground whitespace-pre-line">{step.title}</p>
                   </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown, Search, Menu, X } from "lucide-react";
+import { getAssetPath } from "@/lib/assets";
 
 const services = [
   { name: "Branding", path: "/services/branding" },
@@ -24,7 +25,7 @@ export const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
           <img 
-            src="/Images/Beeline_Logo.svg" 
+            src={getAssetPath("Images/Beeline_Logo.svg")} 
             alt="Beeline Logo" 
             className="h-8 w-auto"
           />
@@ -64,7 +65,7 @@ export const Header = () => {
           <div className="relative group dropdown-trigger">
             <button className="flex items-center gap-1">
               <img 
-                src="/Images/Icon_Translate.webp" 
+                src={getAssetPath("Images/Icon_Translate.webp")} 
                 alt="Language" 
                 className="h-8 w-auto"
               />

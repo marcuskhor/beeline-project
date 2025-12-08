@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Plus, Minus } from "lucide-react";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
 import { cn } from "@/lib/utils";
+import { getAssetPath } from "@/lib/assets";
 
 const services = [
   {
@@ -37,7 +38,7 @@ export const ServicesSection = () => {
   return (
     <section 
       className="py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Images/Background01.png')" }}
+      style={{ backgroundImage: `url('${getAssetPath("Images/Background01.png")}')` }}
     >
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -85,7 +86,7 @@ export const ServicesSection = () => {
           <div className="relative">
             <div className="relative bg-card rounded-3xl p-8 shadow-card">
               <img
-                src="/Images/ExploreOurServices_MainPic.webp"
+                src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
                 alt="Our Services"
                 className="w-full rounded-2xl mb-6"
               />
@@ -99,12 +100,12 @@ export const ServicesSection = () => {
 
             {/* Floating Bees */}
             <img
-              src="/Images/Services_Buzz01.gif"
+              src={getAssetPath("Images/Services_Buzz01.gif")}
               alt="Bee"
               className="absolute -top-8 -left-8 w-20 float-element"
             />
             <img
-              src="/Images/Services_Buzz02.gif"
+              src={getAssetPath("Images/Services_Buzz02.gif")}
               alt="Bee"
               className="absolute -bottom-8 -right-8 w-16 float-element"
               style={{ animationDelay: "0.5s" }}

@@ -3,13 +3,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
+import { getAssetPath } from "@/lib/assets";
 
 const processSteps = [
-  { icon: "/Images/Services_Website Design_Icon01.png", title: "Discovery" },
-  { icon: "/Images/Services_Website Design_Icon02.png", title: "Planning &\nDesign" },
-  { icon: "/Images/Services_Website Design_Icon03.png", title: "Content\nCreation" },
-  { icon: "/Images/Services_Website Design_Icon04.png", title: "Development &\nTesting" },
-  { icon: "/Images/Services_Website Design_Icon05.png", title: "Launch &\nMaintenance" },
+  { icon: "Images/Services_Website Design_Icon01.png", title: "Discovery" },
+  { icon: "Images/Services_Website Design_Icon02.png", title: "Planning &\nDesign" },
+  { icon: "Images/Services_Website Design_Icon03.png", title: "Content\nCreation" },
+  { icon: "Images/Services_Website Design_Icon04.png", title: "Development &\nTesting" },
+  { icon: "Images/Services_Website Design_Icon05.png", title: "Launch &\nMaintenance" },
 ];
 
 export default function WebDesignPage() {
@@ -24,7 +25,7 @@ export default function WebDesignPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <img 
-                  src="/Images/Services_Website Design_Buzz01.gif" 
+                  src={getAssetPath("Images/Services_Website Design_Buzz01.gif")} 
                   alt="Beeline Website Design Mascot" 
                   className="w-full max-w-md mx-auto"
                 />
@@ -53,7 +54,7 @@ export default function WebDesignPage() {
                 <div key={idx} className="flex items-center gap-4">
                   <div className="text-center">
                     <div className="w-20 h-20 md:w-24 md:h-24 bg-card rounded-2xl shadow-lg flex items-center justify-center mb-3 mx-auto">
-                      <img src={step.icon} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                      <img src={getAssetPath(step.icon)} alt={step.title} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
                     </div>
                     <p className="text-sm font-bold text-foreground whitespace-pre-line">{step.title}</p>
                   </div>

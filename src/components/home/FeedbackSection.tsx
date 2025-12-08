@@ -1,3 +1,5 @@
+import { getAssetPath } from "@/lib/assets";
+
 const testimonials = [
   {
     id: 1,
@@ -5,7 +7,7 @@ const testimonials = [
     role: "CEO, Example Co.",
     title: "Effective Management",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet quam non neque scelerisque finibus.",
-    image: "/Images/Feedback_Customer01.png",
+    image: "Images/Feedback_Customer01.png",
   },
   {
     id: 2,
@@ -13,7 +15,7 @@ const testimonials = [
     role: "Marketing Director",
     title: "Creative Solutions",
     content: "Their creative approach helped us stand out in a crowded market. Highly recommended!",
-    image: "/Images/Feedback_Customer02.png",
+    image: "Images/Feedback_Customer02.png",
   },
   {
     id: 3,
@@ -21,7 +23,7 @@ const testimonials = [
     role: "Founder, StartupXYZ",
     title: "Professional Team",
     content: "Working with Beeline was a game-changer for our brand identity.",
-    image: "/Images/Feedback_Customer03.png",
+    image: "Images/Feedback_Customer03.png",
   },
 ];
 
@@ -29,7 +31,7 @@ export const FeedbackSection = () => {
   return (
     <section 
       className="py-20 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Images/Background01.png')" }}
+      style={{ backgroundImage: `url('${getAssetPath("Images/Background01.png")}')` }}
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -47,12 +49,12 @@ export const FeedbackSection = () => {
             >
               {/* Quote Icons */}
               <img
-                src="/Images/Feedback_Icon.webp"
+                src={getAssetPath("Images/Feedback_Icon.webp")}
                 alt="Quote"
                 className="absolute top-6 left-6 w-8 h-8 opacity-30"
               />
               <img
-                src="/Images/Feedback_Icon.webp"
+                src={getAssetPath("Images/Feedback_Icon.webp")}
                 alt="Quote"
                 className="absolute bottom-6 right-6 w-8 h-8 opacity-30 rotate-180"
               />
@@ -60,7 +62,7 @@ export const FeedbackSection = () => {
               {/* Author */}
               <div className="flex items-center gap-4 mb-6">
                 <img
-                  src={testimonial.image}
+                  src={getAssetPath(testimonial.image)}
                   alt={testimonial.name}
                   className="w-16 h-16 rounded-full object-cover"
                 />
