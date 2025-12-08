@@ -102,62 +102,66 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - positioned around the main image */}
+          {/* Floating Bees - clustered around the main image */}
+          {/* Bee with laptop - left side */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", top: "-10%", left: "-15%" }}
+            style={{ width: "180px", top: "15%", left: "-5%" }}
           />
+          {/* Bee with palette - top center-right */}
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", top: "-5%", right: "-10%", animationDelay: "0.3s" }}
+            style={{ width: "150px", top: "-8%", right: "25%", animationDelay: "0.3s" }}
           />
+          {/* Bee with phone - right side */}
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", top: "35%", right: "-20%", animationDelay: "0.6s" }}
+            style={{ width: "160px", top: "8%", right: "-5%", animationDelay: "0.6s" }}
           />
+          {/* Bee with camera - bottom center */}
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
             className="absolute z-[15] float-element"
-            style={{ width: "250px", bottom: "5%", left: "-20%", animationDelay: "0.9s" }}
+            style={{ width: "180px", bottom: "18%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.9s" }}
           />
 
-          {/* Floating Hearts */}
+          {/* Floating Hearts - positioned closer around the image */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "40%", left: "-5%", animationDelay: "0.2s" }}
-          />
-          <img
-            src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
-            alt="Heart Icon 2"
-            className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "45%", right: "0%", animationDelay: "0.4s" }}
+            style={{ width: "45px", top: "38%", left: "3%", animationDelay: "0.2s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
-            alt="Heart Icon 3"
+            alt="Heart Icon 2"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", bottom: "25%", left: "5%", animationDelay: "0.5s" }}
+            style={{ width: "40px", bottom: "28%", left: "8%", animationDelay: "0.4s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
-            alt="Heart Icon 4"
+            alt="Heart Icon 3"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", bottom: "20%", right: "5%", animationDelay: "0.7s" }}
+            style={{ width: "50px", top: "35%", right: "5%", animationDelay: "0.5s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
+            alt="Heart Icon 4"
+            className="absolute z-[15] float-element"
+            style={{ width: "45px", bottom: "25%", right: "8%", animationDelay: "0.7s" }}
+          />
+          <img
+            src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 5"
             className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "60%", right: "10%", animationDelay: "0.8s" }}
+            style={{ width: "35px", bottom: "32%", right: "18%", animationDelay: "0.8s" }}
           />
         </div>
       </div>
