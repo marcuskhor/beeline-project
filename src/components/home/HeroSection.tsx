@@ -4,22 +4,22 @@ import { getAssetPath } from "@/lib/assets";
 
 const floatingIcons = [
   // Top area
-  { src: "Images/Hero_Google.webp", alt: "Google", className: "top-[15%] left-[45%] w-10 md:w-14" },
-  { src: "Images/Hero_Whatsapp.webp", alt: "WhatsApp", className: "top-[10%] right-[5%] w-12 md:w-16" },
+  { src: "Images/Hero_Google.webp", alt: "Google", className: "top-[10%] left-[40%] w-14 md:w-20" },
+  { src: "Images/Hero_Whatsapp.webp", alt: "WhatsApp", className: "top-[5%] right-[0%] w-16 md:w-24" },
   
   // Left side
-  { src: "Images/Hero_Buzz01.webp", alt: "Buzz", className: "top-[30%] left-[5%] w-20 md:w-28" },
-  { src: "Images/Hero_Website.webp", alt: "Website", className: "top-[55%] left-[0%] w-10 md:w-14" },
+  { src: "Images/Hero_Buzz01.webp", alt: "Buzz", className: "top-[25%] left-[-5%] w-24 md:w-36" },
+  { src: "Images/Hero_Website.webp", alt: "Website", className: "top-[55%] left-[-10%] w-14 md:w-20" },
   
   // Right side
-  { src: "Images/Hero_XHS.webp", alt: "XHS", className: "top-[25%] right-[0%] w-14 md:w-20" },
-  { src: "Images/Hero_Buzz02.webp", alt: "Buzz", className: "top-[35%] right-[5%] w-16 md:w-24" },
-  { src: "Images/Hero_Messenger.webp", alt: "Messenger", className: "top-[50%] right-[10%] w-10 md:w-14" },
-  { src: "Images/Hero_Instagram.webp", alt: "Instagram", className: "top-[55%] right-[-5%] w-14 md:w-20" },
+  { src: "Images/Hero_XHS.webp", alt: "XHS", className: "top-[20%] right-[-5%] w-20 md:w-28" },
+  { src: "Images/Hero_Buzz02.webp", alt: "Buzz", className: "top-[35%] right-[-10%] w-24 md:w-32" },
+  { src: "Images/Hero_Messenger.webp", alt: "Messenger", className: "top-[50%] right-[5%] w-14 md:w-20" },
+  { src: "Images/Hero_Instagram.webp", alt: "Instagram", className: "top-[55%] right-[-15%] w-20 md:w-28" },
   
   // Bottom area
-  { src: "Images/Hero_Facebook.webp", alt: "Facebook", className: "bottom-[15%] left-[20%] w-14 md:w-20" },
-  { src: "Images/Hero_Tiktok.webp", alt: "TikTok", className: "bottom-[10%] right-[25%] w-12 md:w-16" },
+  { src: "Images/Hero_Facebook.webp", alt: "Facebook", className: "bottom-[10%] left-[15%] w-20 md:w-28" },
+  { src: "Images/Hero_Tiktok.webp", alt: "TikTok", className: "bottom-[5%] right-[20%] w-16 md:w-24" },
 ];
 
 export const HeroSection = () => {
@@ -43,24 +43,24 @@ export const HeroSection = () => {
           {/* Hero Image with Floating Elements */}
           <div className="relative animate-scale-in">
             <div className="relative w-full aspect-square max-w-xl mx-auto">
-              {/* Main Image */}
+              {/* Main Image - pushed to back with z-0 */}
               <img
                 src={getAssetPath("Images/Hero_MainPic.webp")}
                 alt="Beeline Hero"
-                className="w-full h-full object-contain relative z-10"
+                className="w-full h-full object-contain relative z-0"
               />
               
-              {/* Floating Icons */}
+              {/* Floating Icons - in front with z-10 */}
               {floatingIcons.map((icon, index) => (
                 <div
                   key={index}
-                  className={`float-element absolute ${icon.className}`}
+                  className={`float-element absolute z-10 ${icon.className}`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <img
                     src={getAssetPath(icon.src)}
                     alt={icon.alt}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain drop-shadow-lg"
                   />
                 </div>
               ))}
