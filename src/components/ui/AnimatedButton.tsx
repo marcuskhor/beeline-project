@@ -13,11 +13,11 @@ export const AnimatedButton = ({
   onClick,
   className,
 }: AnimatedButtonProps) => {
-  const baseStyles = "btn-animated relative overflow-hidden px-8 py-4 rounded-full font-bold text-lg cursor-pointer transition-shadow";
+  const baseStyles = "relative overflow-hidden px-8 py-4 rounded-full font-bold text-lg cursor-pointer transition-all duration-300";
   
   const variants = {
-    primary: "bg-gradient-to-br from-[#ECC25F] to-[#E9A15A] text-primary-foreground hover:shadow-hover",
-    secondary: "bg-secondary text-secondary-foreground hover:shadow-lg",
+    primary: "bg-gradient-to-br from-[#ECC25F] to-[#E9A15A] text-foreground hover:shadow-hover hover:scale-105",
+    secondary: "bg-secondary text-secondary-foreground hover:shadow-lg hover:scale-105",
   };
 
   return (
@@ -25,16 +25,7 @@ export const AnimatedButton = ({
       onClick={onClick}
       className={cn(baseStyles, variants[variant], className)}
     >
-      <span className="btn-bg" />
-      <span className="text-wrap">
-        <span className="text-inner">{children}</span>
-        <span className={cn(
-          "text-inner",
-          variant === "primary" ? "text-primary" : "text-secondary"
-        )}>
-          {children}
-        </span>
-      </span>
+      {children}
     </button>
   );
 };
