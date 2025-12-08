@@ -85,13 +85,13 @@ export const ServicesSection = () => {
         </div>
 
         {/* Media Content - 65% width */}
-        <div className="w-full lg:w-[65%] relative min-h-[500px] flex items-center justify-center">
+        <div className="w-full lg:w-[65%] relative min-h-[600px] flex items-center justify-center">
           {/* Center wrapper for main image and button */}
-          <div className="relative flex flex-col items-center">
+          <div className="relative flex flex-col items-center z-10">
             <img
               src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
               alt="Social Media Post"
-              className="w-[400px] h-auto object-cover z-10 rounded-[20px]"
+              className="w-[400px] h-auto object-cover rounded-[20px]"
               style={{ boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15)" }}
             />
             
@@ -102,66 +102,66 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - clustered around the main image */}
-          {/* Bee with laptop - left side */}
+          {/* Floating Bees - 250px width like reference, clustered around main image */}
+          {/* Bee 1 - laptop bee, left side of image */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] float-element"
-            style={{ width: "180px", top: "15%", left: "-5%" }}
+            style={{ width: "250px", top: "22%", left: "-18%" }}
           />
-          {/* Bee with palette - top center-right */}
+          {/* Bee 2 - palette bee, top right area */}
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] float-element"
-            style={{ width: "150px", top: "-8%", right: "25%", animationDelay: "0.3s" }}
+            style={{ width: "225px", top: "-12%", right: "8%", animationDelay: "0.1s" }}
           />
-          {/* Bee with phone - right side */}
+          {/* Bee 3 - phone bee, right side */}
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
             className="absolute z-[15] float-element"
-            style={{ width: "160px", top: "8%", right: "-5%", animationDelay: "0.6s" }}
+            style={{ width: "250px", top: "5%", right: "-20%", animationDelay: "0.2s" }}
           />
-          {/* Bee with camera - bottom center */}
+          {/* Bee 4 - camera bee, bottom center overlapping image */}
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
             className="absolute z-[15] float-element"
-            style={{ width: "180px", bottom: "18%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.9s" }}
+            style={{ width: "250px", bottom: "12%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.3s" }}
           />
 
-          {/* Floating Hearts - positioned closer around the image */}
+          {/* Floating Hearts - 50px width like reference, around bottom sides */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
             className="absolute z-[15] float-element"
-            style={{ width: "45px", top: "38%", left: "3%", animationDelay: "0.2s" }}
-          />
-          <img
-            src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
-            alt="Heart Icon 2"
-            className="absolute z-[15] float-element"
-            style={{ width: "40px", bottom: "28%", left: "8%", animationDelay: "0.4s" }}
-          />
-          <img
-            src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
-            alt="Heart Icon 3"
-            className="absolute z-[15] float-element"
-            style={{ width: "50px", top: "35%", right: "5%", animationDelay: "0.5s" }}
-          />
-          <img
-            src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
-            alt="Heart Icon 4"
-            className="absolute z-[15] float-element"
-            style={{ width: "45px", bottom: "25%", right: "8%", animationDelay: "0.7s" }}
+            style={{ width: "50px", top: "45%", left: "-5%", animationDelay: "0.2s" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
+            alt="Heart Icon 2"
+            className="absolute z-[15] float-element"
+            style={{ width: "50px", top: "50%", right: "-3%", animationDelay: "0.3s" }}
+          />
+          <img
+            src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
+            alt="Heart Icon 3"
+            className="absolute z-[15] float-element"
+            style={{ width: "65px", bottom: "22%", left: "0%", animationDelay: "0.4s" }}
+          />
+          <img
+            src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
+            alt="Heart Icon 4"
+            className="absolute z-[15] float-element"
+            style={{ width: "85px", bottom: "18%", right: "-2%", animationDelay: "0.5s" }}
+          />
+          <img
+            src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
             className="absolute z-[15] float-element"
-            style={{ width: "35px", bottom: "32%", right: "18%", animationDelay: "0.8s" }}
+            style={{ width: "60px", bottom: "28%", right: "12%", animationDelay: "0.6s" }}
           />
         </div>
       </div>
