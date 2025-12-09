@@ -283,3 +283,27 @@
 .animate-spin-slow {
   animation: spin-slow 20s linear infinite;
 }
+
+/* Quote wiggle animation for feedback section */
+@keyframes quote-wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+/* For rotated quote icon */
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+@keyframes quote-wiggle-rotated {
+  0% {
+    transform: rotate(175deg);
+  }
+  100% {
+    transform: rotate(185deg);
+  }
+}
