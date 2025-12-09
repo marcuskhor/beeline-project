@@ -51,7 +51,7 @@ export const HeroSection = () => {
 
     // Icon positions relative to image center [x offset, y offset, base width]
     const iconPositions = [
-      { x: -280, y: -120, width: 170 },  // Buzz 1 - top left
+      { x: -180, y: -120, width: 170 },  // Buzz 1 - top left
       { x: 220, y: -80, width: 150 },    // Buzz 2 - top right
       { x: -200, y: 80, width: 100 },    // Facebook - bottom left
       { x: 280, y: 20, width: 100 },     // Instagram - right
