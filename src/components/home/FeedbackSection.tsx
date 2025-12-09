@@ -64,8 +64,8 @@ export const FeedbackSection = () => {
               />
               <img
                 src={getAssetPath("Images/Feedback_Icon.webp")}
-                alt="Quote"
-                className="absolute w-4 md:w-[25px] bottom-10 md:top-[300px] right-5 md:right-[30px] z-[1] rotate-180 animate-[quote-wiggle_2.5s_ease-in-out_infinite_alternate]"
+                alt="Unquote"
+                className="absolute w-4 md:w-[25px] bottom-10 md:top-[300px] right-5 md:right-[30px] z-[1] animate-[quote-wiggle-rotated_2.5s_ease-in-out_infinite_alternate]"
               />
 
               {/* Title */}
