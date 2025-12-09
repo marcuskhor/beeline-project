@@ -151,25 +151,25 @@ export const ServicesSection = () => {
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] floating-bee"
-            style={{ width: "200px", top: "25%", left: "2%" }}
+            style={{ width: "220px", top: "20%", left: "8%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] floating-bee"
-            style={{ width: "170px", top: "-5%", left: "38%" }}
+            style={{ width: "200px", top: "-8%", left: "32%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
             className="absolute z-[15] floating-bee"
-            style={{ width: "180px", top: "12%", right: "5%" }}
+            style={{ width: "210px", top: "5%", right: "8%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
             className="absolute z-[15] floating-bee"
-            style={{ width: "200px", bottom: "15%", left: "50%", transform: "translateX(-50%)" }}
+            style={{ width: "230px", bottom: "12%", left: "50%", transform: "translateX(-50%)" }}
           />
 
           {/* Floating Hearts - with GSAP animation */}
