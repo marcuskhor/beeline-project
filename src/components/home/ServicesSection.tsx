@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import { getAssetPath } from "@/lib/assets";
 import gsap from "gsap";
 
+const typingText = "Buzzies are here to brighten your day with joy and energy, one happy buzz at a time!";
+
 const services = [
   {
     id: "brand-strategy",
@@ -31,6 +33,7 @@ const services = [
 
 export const ServicesSection = () => {
   const [activeService, setActiveService] = useState<string | null>(null);
+  const [displayedText, setDisplayedText] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const beesRef = useRef<(HTMLImageElement | null)[]>([]);
@@ -204,6 +207,30 @@ export const ServicesSection = () => {
     };
   }, []);
 
+  // Typing animation effect
+  useEffect(() => {
+    let charIndex = 0;
+    let timeout: NodeJS.Timeout;
+    
+    const type = () => {
+      if (charIndex < typingText.length) {
+        setDisplayedText(typingText.slice(0, charIndex + 1));
+        charIndex++;
+        timeout = setTimeout(type, 30);
+      } else {
+        timeout = setTimeout(() => {
+          charIndex = 0;
+          setDisplayedText("");
+          type();
+        }, 2000);
+      }
+    };
+    
+    type();
+    
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <section 
       className="bg-cover bg-center bg-no-repeat"
@@ -214,13 +241,21 @@ export const ServicesSection = () => {
         <div ref={containerRef} className="w-full lg:w-[65%] relative min-h-[400px] md:min-h-[500px] lg:min-h-[600px] flex items-center justify-center order-1 lg:order-2">
           {/* Center wrapper for main image and button */}
           <div className="relative flex flex-col items-center z-10">
-            <img
-              ref={imageRef}
-              src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
-              alt="Social Media Post"
-              className="w-[200px] md:w-[340px] lg:w-[400px] h-auto object-cover rounded-[20px]"
-              style={{ boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15)" }}
-            />
+            <div className="relative">
+              <img
+                ref={imageRef}
+                src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
+                alt="Social Media Post"
+                className="w-[200px] md:w-[340px] lg:w-[400px] h-auto object-cover rounded-[20px]"
+                style={{ boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15)" }}
+              />
+              
+              {/* Typing Text Area - positioned at bottom of image */}
+              <div className="absolute bottom-[8px] md:bottom-[12px] lg:bottom-[15px] left-1/2 -translate-x-1/2 w-[85%] text-[0.5rem] md:text-[0.6rem] lg:text-[0.7rem] font-semibold text-foreground leading-[1.4] z-[12]">
+                {displayedText}
+                <span className="inline-block w-[2px] h-[0.9em] bg-foreground ml-[2px] relative top-[2px] animate-[blink_1s_infinite]" />
+              </div>
+            </div>
             
             <div className="mt-10 z-20">
               <Link to="/services/branding">
