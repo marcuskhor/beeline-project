@@ -88,7 +88,7 @@ export const ServicesSection = () => {
       { x: imageCenterX, y: imageCenterY - (280 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 10 },    // Top center
       { x: imageCenterX + (180 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 0.9 * sizeScale, rotation: 0 },  // Right
       { x: imageCenterX - (180 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: -20 }, // Left
-      { x: imageCenterX, y: imageCenterY + (200 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 0 },     // Bottom center
+      { x: imageCenterX, y: imageCenterY + (100 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 0 },     // Bottom center
     ];
 
     // Heart positions
