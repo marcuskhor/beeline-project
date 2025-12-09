@@ -18,15 +18,15 @@ const floatingIcons = [
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-[500px] md:min-h-[600px] lg:min-h-[700px] flex items-center pt-20 md:pt-24 pb-12 md:pb-20 overflow-hidden">
+    <section className="min-h-[700px] flex items-center pt-24 pb-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-6 md:gap-10 items-center">
-          {/* Text Content - 30% width on desktop */}
-          <div className="lg:w-[30%] w-full text-center lg:text-left animate-fade-in">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-extrabold leading-[1.2] mb-3 md:mb-5">
+        <div className="flex flex-col lg:flex-row gap-10 items-center">
+          {/* Text Content - 30% width */}
+          <div className="lg:w-[30%] animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-[2.5rem] font-extrabold leading-[1.2] mb-5">
               Real stories, simply told.
             </h1>
-            <p className="text-base md:text-lg font-semibold italic text-text-brown mb-5 md:mb-8">
+            <p className="text-lg font-semibold italic text-text-brown mb-8">
               Creating unique brand identities and smart marketing strategies to help your business stand out and boost profits.
             </p>
             <Link to="/contact">
@@ -34,9 +34,9 @@ export const HeroSection = () => {
             </Link>
           </div>
 
-          {/* Hero Image with Floating Elements - 70% width on desktop */}
-          <div className="lg:w-[70%] w-full relative mt-6 md:mt-12 animate-scale-in">
-            <div className="relative w-full max-w-[400px] md:max-w-[600px] lg:max-w-[800px] mx-auto">
+          {/* Hero Image with Floating Elements - 70% width */}
+          <div className="lg:w-[70%] relative mt-12 animate-scale-in">
+            <div className="relative w-full max-w-[800px] mx-auto">
               {/* Main Image - pushed to back with z-10 */}
               <img
                 src={getAssetPath("Images/Hero_MainPic.webp")}
@@ -44,16 +44,16 @@ export const HeroSection = () => {
                 className="w-full h-auto object-contain relative z-10 block mx-auto"
               />
               
-              {/* Floating Icons - hidden on small mobile, scaled on tablet */}
+              {/* Floating Icons - in front with z-[15] */}
               {floatingIcons.map((icon, index) => (
                 <div
                   key={index}
-                  className="float-element absolute z-[15] hidden sm:block"
+                  className="float-element absolute z-[15]"
                   style={{
                     top: icon.top,
                     left: icon.left,
                     right: icon.right,
-                    width: `clamp(40px, ${parseInt(icon.width) * 0.6}px, ${icon.width})`,
+                    width: icon.width,
                     animationDelay: `${index * 0.2}s`,
                   }}
                 >
