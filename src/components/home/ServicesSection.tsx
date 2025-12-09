@@ -86,7 +86,7 @@ export const ServicesSection = () => {
     // Bee positions centered around the main image
     const beePositions = [
       { x: imageCenterX, y: imageCenterY - (280 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 10 },    // Top center
-      { x: imageCenterX + (100 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 1.1 * sizeScale, rotation: 0 },  // Right
+      { x: imageCenterX + (140 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 1.1 * sizeScale, rotation: 0 },  // Right
       { x: imageCenterX - (180 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: -20 }, // Left
       { x: imageCenterX, y: imageCenterY + (100 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 0 },     // Bottom center
     ];
