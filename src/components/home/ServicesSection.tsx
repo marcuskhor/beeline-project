@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Plus, Minus } from "lucide-react";
 import { AnimatedButton } from "@/components/ui/AnimatedButton";
 import { cn } from "@/lib/utils";
 import { getAssetPath } from "@/lib/assets";
+import gsap from "gsap";
 
 const services = [
   {
@@ -30,10 +31,53 @@ const services = [
 
 export const ServicesSection = () => {
   const [activeService, setActiveService] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleService = (id: string) => {
     setActiveService(activeService === id ? null : id);
   };
+
+  // GSAP floating animation
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const bees = containerRef.current.querySelectorAll('.floating-bee');
+    const hearts = containerRef.current.querySelectorAll('.floating-heart');
+
+    // Animate bees with gentle floating
+    bees.forEach((bee, index) => {
+      gsap.to(bee, {
+        y: "random(-15, 15)",
+        x: "random(-5, 5)",
+        rotation: "random(-3, 3)",
+        duration: "random(2.5, 3.5)",
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: index * 0.2,
+      });
+    });
+
+    // Animate hearts with smaller, faster floating
+    hearts.forEach((heart, index) => {
+      gsap.to(heart, {
+        y: "random(-10, 10)",
+        x: "random(-3, 3)",
+        scale: "random(0.95, 1.05)",
+        duration: "random(1.8, 2.5)",
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+        delay: index * 0.15,
+      });
+    });
+
+    return () => {
+      // Cleanup animations
+      bees.forEach((bee) => gsap.killTweensOf(bee));
+      hearts.forEach((heart) => gsap.killTweensOf(heart));
+    };
+  }, []);
 
   return (
     <section 
@@ -85,7 +129,7 @@ export const ServicesSection = () => {
         </div>
 
         {/* Media Content - 65% width */}
-        <div className="w-full lg:w-[65%] relative min-h-[600px] flex items-center justify-center">
+        <div ref={containerRef} className="w-full lg:w-[65%] relative min-h-[600px] flex items-center justify-center">
           {/* Center wrapper for main image and button */}
           <div className="relative flex flex-col items-center z-10">
             <img
@@ -102,66 +146,62 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - clustered tightly around main image like reference */}
-          {/* Bee 1 - laptop bee, left side overlapping image edge */}
+          {/* Floating Bees - with GSAP animation */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
-            className="absolute z-[15] float-element"
+            className="absolute z-[15] floating-bee"
             style={{ width: "200px", top: "25%", left: "2%" }}
           />
-          {/* Bee 2 - palette bee, top area above image */}
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
-            className="absolute z-[15] float-element"
-            style={{ width: "170px", top: "-5%", left: "38%", animationDelay: "0.1s" }}
+            className="absolute z-[15] floating-bee"
+            style={{ width: "170px", top: "-5%", left: "38%" }}
           />
-          {/* Bee 3 - phone bee, right side overlapping image edge */}
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
-            className="absolute z-[15] float-element"
-            style={{ width: "180px", top: "12%", right: "5%", animationDelay: "0.2s" }}
+            className="absolute z-[15] floating-bee"
+            style={{ width: "180px", top: "12%", right: "5%" }}
           />
-          {/* Bee 4 - camera bee, bottom center overlapping image */}
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
-            className="absolute z-[15] float-element"
-            style={{ width: "200px", bottom: "15%", left: "50%", transform: "translateX(-50%)", animationDelay: "0.3s" }}
+            className="absolute z-[15] floating-bee"
+            style={{ width: "200px", bottom: "15%", left: "50%", transform: "translateX(-50%)" }}
           />
 
-          {/* Floating Hearts - positioned around bottom edges of image */}
+          {/* Floating Hearts - with GSAP animation */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
-            className="absolute z-[15] float-element"
-            style={{ width: "45px", top: "48%", left: "12%", animationDelay: "0.2s" }}
+            className="absolute z-[15] floating-heart"
+            style={{ width: "45px", top: "48%", left: "12%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 2"
-            className="absolute z-[15] float-element"
-            style={{ width: "45px", top: "42%", right: "12%", animationDelay: "0.3s" }}
+            className="absolute z-[15] floating-heart"
+            style={{ width: "45px", top: "42%", right: "12%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
             alt="Heart Icon 3"
-            className="absolute z-[15] float-element"
-            style={{ width: "55px", bottom: "25%", left: "15%", animationDelay: "0.4s" }}
+            className="absolute z-[15] floating-heart"
+            style={{ width: "55px", bottom: "25%", left: "15%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
             alt="Heart Icon 4"
-            className="absolute z-[15] float-element"
-            style={{ width: "65px", bottom: "22%", right: "10%", animationDelay: "0.5s" }}
+            className="absolute z-[15] floating-heart"
+            style={{ width: "65px", bottom: "22%", right: "10%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
-            className="absolute z-[15] float-element"
-            style={{ width: "50px", bottom: "30%", right: "22%", animationDelay: "0.6s" }}
+            className="absolute z-[15] floating-heart"
+            style={{ width: "50px", bottom: "30%", right: "22%" }}
           />
         </div>
       </div>
