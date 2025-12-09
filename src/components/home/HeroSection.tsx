@@ -137,25 +137,12 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="min-h-[700px] flex items-center pt-24 pb-20 overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-10 items-center">
-          {/* Text Content - 30% width */}
-          <div className="lg:w-[30%] animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-[2.5rem] font-extrabold leading-[1.2] mb-5">
-              Real stories, simply told.
-            </h1>
-            <p className="text-lg font-semibold italic text-text-brown mb-8">
-              Creating unique brand identities and smart marketing strategies to help your business stand out and boost profits.
-            </p>
-            <Link to="/contact">
-              <AnimatedButton>Free Consultation</AnimatedButton>
-            </Link>
-          </div>
-
-          {/* Hero Image with Floating Elements - 70% width */}
-          <div className="lg:w-[70%] relative mt-12 animate-scale-in">
-            <div ref={containerRef} className="relative w-full max-w-[800px] mx-auto">
+    <section className="min-h-[500px] lg:min-h-[700px] flex items-center pt-32 lg:pt-24 pb-10 lg:pb-20 overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-5">
+        <div className="flex flex-col lg:flex-row gap-0 lg:gap-10 items-center">
+          {/* Hero Image with Floating Elements - comes first on mobile */}
+          <div className="lg:w-[70%] relative order-1 lg:order-2 animate-scale-in">
+            <div ref={containerRef} className="relative w-full max-w-[600px] lg:max-w-[800px] mx-auto">
               {/* Main Image */}
               <img
                 ref={imageRef}
@@ -180,6 +167,19 @@ export const HeroSection = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Text Content - comes second on mobile (below image) */}
+          <div className="lg:w-[30%] order-2 lg:order-1 animate-fade-in text-center lg:text-left mt-0 lg:mt-0">
+            <h1 className="text-xl md:text-2xl lg:text-[2.5rem] font-extrabold leading-[1.2] mb-3 lg:mb-5">
+              Real stories, simply told.
+            </h1>
+            <p className="text-sm md:text-base lg:text-lg font-semibold italic text-text-brown mb-6 lg:mb-8 px-4 lg:px-0">
+              Creating unique brand identities and smart marketing strategies to help your business stand out and boost profits.
+            </p>
+            <Link to="/contact">
+              <AnimatedButton>Free Consultation</AnimatedButton>
+            </Link>
           </div>
         </div>
       </div>
