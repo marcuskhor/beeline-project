@@ -41,26 +41,35 @@ export const FeedbackSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 gap-y-16">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-card rounded-3xl p-8 shadow-card hover:shadow-lg transition-shadow relative"
+              className="bg-card rounded-3xl p-6 md:p-8 pt-12 md:pt-8 shadow-card hover:shadow-lg transition-shadow relative"
             >
+              {/* Avatar - overlapping on mobile */}
+              <div className="md:hidden absolute -top-10 left-1/2 -translate-x-1/2">
+                <img
+                  src={getAssetPath(testimonial.image)}
+                  alt={testimonial.name}
+                  className="w-20 h-20 rounded-full object-cover border-4 border-card"
+                />
+              </div>
+
               {/* Quote Icons */}
               <img
                 src={getAssetPath("Images/Feedback_Icon.webp")}
                 alt="Quote"
-                className="absolute top-6 left-6 w-8 h-8 opacity-30"
+                className="absolute top-6 left-6 w-6 md:w-8 h-6 md:h-8 opacity-30"
               />
               <img
                 src={getAssetPath("Images/Feedback_Icon.webp")}
                 alt="Quote"
-                className="absolute bottom-6 right-6 w-8 h-8 opacity-30 rotate-180"
+                className="absolute bottom-6 right-6 w-6 md:w-8 h-6 md:h-8 opacity-30 rotate-180"
               />
 
-              {/* Author */}
-              <div className="flex items-center gap-4 mb-6">
+              {/* Author - Desktop horizontal layout */}
+              <div className="hidden md:flex items-center gap-4 mb-6">
                 <img
                   src={getAssetPath(testimonial.image)}
                   alt={testimonial.name}
@@ -72,8 +81,14 @@ export const FeedbackSection = () => {
                 </div>
               </div>
 
-              <h5 className="font-bold text-primary mb-2">{testimonial.title}</h5>
-              <p className="text-muted-foreground">{testimonial.content}</p>
+              {/* Author - Mobile centered layout */}
+              <div className="md:hidden text-center mb-4">
+                <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                <span className="text-sm text-muted-foreground">{testimonial.role}</span>
+              </div>
+
+              <h5 className="font-bold text-primary mb-2 uppercase text-sm md:text-base md:normal-case text-center md:text-left">{testimonial.title}</h5>
+              <p className="text-muted-foreground italic md:not-italic text-center md:text-left text-sm md:text-base">{testimonial.content}</p>
             </div>
           ))}
         </div>
