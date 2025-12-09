@@ -129,13 +129,13 @@ export const ServicesSection = () => {
         </div>
 
         {/* Media Content - 65% width */}
-        <div ref={containerRef} className="w-full lg:w-[65%] relative min-h-[600px] flex items-center justify-center">
+        <div ref={containerRef} className="w-full lg:w-[65%] relative min-h-[400px] lg:min-h-[600px] flex items-center justify-center">
           {/* Center wrapper for main image and button */}
           <div className="relative flex flex-col items-center z-10">
             <img
               src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
               alt="Social Media Post"
-              className="w-[320px] h-auto object-cover rounded-[20px]"
+              className="w-[280px] lg:w-[320px] h-auto object-cover rounded-[20px]"
               style={{ boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15)" }}
             />
             
@@ -146,61 +146,61 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - with GSAP animation */}
+          {/* Floating Bees - with GSAP animation - hidden on mobile */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
-            className="absolute z-[15] floating-bee"
+            className="absolute z-[15] floating-bee hidden lg:block"
             style={{ width: "220px", top: "-5%", left: "38%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
-            className="absolute z-[15] floating-bee"
+            className="absolute z-[15] floating-bee hidden lg:block"
             style={{ width: "200px", top: "22%", right: "18%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
-            className="absolute z-[15] floating-bee"
+            className="absolute z-[15] floating-bee hidden lg:block"
             style={{ width: "210px", top: "18%", left: "15%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
-            className="absolute z-[15] floating-bee"
+            className="absolute z-[15] floating-bee hidden lg:block"
             style={{ width: "230px", bottom: "18%", left: "50%", transform: "translateX(-50%)" }}
           />
 
-          {/* Floating Hearts - with GSAP animation */}
+          {/* Floating Hearts - with GSAP animation - hidden on mobile */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
-            className="absolute z-[15] floating-heart"
+            className="absolute z-[15] floating-heart hidden lg:block"
             style={{ width: "45px", top: "48%", left: "12%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 2"
-            className="absolute z-[15] floating-heart"
+            className="absolute z-[15] floating-heart hidden lg:block"
             style={{ width: "45px", top: "42%", right: "12%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
             alt="Heart Icon 3"
-            className="absolute z-[15] floating-heart"
+            className="absolute z-[15] floating-heart hidden lg:block"
             style={{ width: "55px", bottom: "25%", left: "15%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
             alt="Heart Icon 4"
-            className="absolute z-[15] floating-heart"
+            className="absolute z-[15] floating-heart hidden lg:block"
             style={{ width: "65px", bottom: "22%", right: "10%" }}
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
-            className="absolute z-[15] floating-heart"
+            className="absolute z-[15] floating-heart hidden lg:block"
             style={{ width: "50px", bottom: "30%", right: "22%" }}
           />
         </div>
