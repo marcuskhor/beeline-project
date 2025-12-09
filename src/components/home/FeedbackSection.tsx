@@ -73,16 +73,16 @@ export const FeedbackSection = () => {
                 {testimonial.title}
               </h5>
 
-              {/* Quote Text */}
-              <p className="text-[0.65rem] md:text-[0.8rem] italic text-text-light leading-[1.2rem] my-4 md:my-5 mx-6 md:mx-0">
-                {testimonial.content}
-              </p>
-
-              {/* Author */}
-              <div className="mt-6 md:mt-8">
+              {/* Author - now before quote */}
+              <div className="mt-4 md:mt-6">
                 <h4 className="text-base md:text-xl font-extrabold text-text-brown m-0">{testimonial.name}</h4>
                 <span className="text-xs md:text-sm font-semibold text-text-brown">{testimonial.role}</span>
               </div>
+
+              {/* Quote Text - now after author */}
+              <p className="text-[0.65rem] md:text-[0.8rem] italic text-text-light leading-[1.2rem] my-4 md:my-5 mx-6 md:mx-0">
+                {testimonial.content}
+              </p>
             </div>
           ))}
         </div>
