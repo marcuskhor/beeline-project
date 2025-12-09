@@ -146,62 +146,53 @@ export const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Floating Bees - with GSAP animation - hidden on mobile */}
+          {/* Floating Bees - with GSAP animation - responsive sizes */}
           <img
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
-            className="absolute z-[15] floating-bee hidden lg:block"
-            style={{ width: "220px", top: "-5%", left: "38%" }}
+            className="absolute z-[15] floating-bee w-[100px] lg:w-[220px] -top-[2%] lg:-top-[5%] left-[60%] lg:left-[38%]"
           />
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
-            className="absolute z-[15] floating-bee hidden lg:block"
-            style={{ width: "200px", top: "22%", right: "18%" }}
+            className="absolute z-[15] floating-bee w-[90px] lg:w-[200px] top-[5%] lg:top-[22%] -right-[5%] lg:right-[18%]"
           />
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
-            className="absolute z-[15] floating-bee hidden lg:block"
-            style={{ width: "210px", top: "18%", left: "15%" }}
+            className="absolute z-[15] floating-bee w-[95px] lg:w-[210px] top-[15%] lg:top-[18%] -left-[8%] lg:left-[15%]"
           />
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
-            className="absolute z-[15] floating-bee hidden lg:block"
-            style={{ width: "230px", bottom: "18%", left: "50%", transform: "translateX(-50%)" }}
+            className="absolute z-[15] floating-bee w-[105px] lg:w-[230px] bottom-[5%] lg:bottom-[18%] left-[50%] -translate-x-1/2"
           />
 
-          {/* Floating Hearts - with GSAP animation - hidden on mobile */}
+          {/* Floating Hearts - with GSAP animation - responsive sizes */}
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
-            className="absolute z-[15] floating-heart hidden lg:block"
-            style={{ width: "45px", top: "48%", left: "12%" }}
+            className="absolute z-[15] floating-heart w-[25px] lg:w-[45px] top-[35%] lg:top-[48%] -left-[2%] lg:left-[12%]"
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 2"
-            className="absolute z-[15] floating-heart hidden lg:block"
-            style={{ width: "45px", top: "42%", right: "12%" }}
+            className="absolute z-[15] floating-heart w-[25px] lg:w-[45px] top-[30%] lg:top-[42%] -right-[2%] lg:right-[12%]"
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
             alt="Heart Icon 3"
-            className="absolute z-[15] floating-heart hidden lg:block"
-            style={{ width: "55px", bottom: "25%", left: "15%" }}
+            className="absolute z-[15] floating-heart w-[30px] lg:w-[55px] bottom-[18%] lg:bottom-[25%] -left-[5%] lg:left-[15%]"
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
             alt="Heart Icon 4"
-            className="absolute z-[15] floating-heart hidden lg:block"
-            style={{ width: "65px", bottom: "22%", right: "10%" }}
+            className="absolute z-[15] floating-heart w-[35px] lg:w-[65px] bottom-[15%] lg:bottom-[22%] -right-[5%] lg:right-[10%]"
           />
           <img
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
-            className="absolute z-[15] floating-heart hidden lg:block"
-            style={{ width: "50px", bottom: "30%", right: "22%" }}
+            className="absolute z-[15] floating-heart w-[28px] lg:w-[50px] bottom-[25%] lg:bottom-[30%] right-[5%] lg:right-[22%]"
           />
         </div>
       </div>
