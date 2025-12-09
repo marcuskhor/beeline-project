@@ -83,12 +83,12 @@ export const ServicesSection = () => {
       moveY = -20;
     }
 
-    // Bee positions relative to image center (matching original)
+    // Bee positions centered around the main image
     const beePositions = [
-      { x: imageCenterX - (70 * distScale) + moveX, y: imageCenterY - (280 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 10 },
-      { x: imageCenterX + (120 * distScale) + moveX, y: imageCenterY - (190 * distScale) + moveY, scale: 0.9 * sizeScale, rotation: 0 },
-      { x: imageCenterX - (250 * distScale) + moveX, y: imageCenterY - (130 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: -20 },
-      { x: imageCenterX - (30 * distScale) + moveX, y: imageCenterY - (30 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 0 },
+      { x: imageCenterX, y: imageCenterY - (280 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 10 },    // Top center
+      { x: imageCenterX + (180 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 0.9 * sizeScale, rotation: 0 },  // Right
+      { x: imageCenterX - (180 * distScale) + moveX, y: imageCenterY - (80 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: -20 }, // Left
+      { x: imageCenterX, y: imageCenterY + (200 * distScale) + moveY, scale: 1.0 * sizeScale, rotation: 0 },     // Bottom center
     ];
 
     // Heart positions
@@ -259,40 +259,40 @@ export const ServicesSection = () => {
             style={{ opacity: 0 }}
           />
 
-          {/* Floating Hearts - positioned dynamically via GSAP */}
+          {/* Floating Hearts - positioned dynamically via GSAP (z-20 to be in front) */}
           <img
             ref={(el) => { heartsRef.current[0] = el; }}
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 1"
-            className="absolute z-[5]"
+            className="absolute z-[20]"
             style={{ opacity: 0 }}
           />
           <img
             ref={(el) => { heartsRef.current[1] = el; }}
             src={getAssetPath("Images/ExploreOurServices_LikeIcon01.webp")}
             alt="Heart Icon 2"
-            className="absolute z-[5]"
+            className="absolute z-[20]"
             style={{ opacity: 0 }}
           />
           <img
             ref={(el) => { heartsRef.current[2] = el; }}
             src={getAssetPath("Images/ExploreOurServices_LikeIcon02.webp")}
             alt="Heart Icon 3"
-            className="absolute z-[5]"
+            className="absolute z-[20]"
             style={{ opacity: 0 }}
           />
           <img
             ref={(el) => { heartsRef.current[3] = el; }}
             src={getAssetPath("Images/ExploreOurServices_LikeIcon03.webp")}
             alt="Heart Icon 4"
-            className="absolute z-[5]"
+            className="absolute z-[20]"
             style={{ opacity: 0 }}
           />
           <img
             ref={(el) => { heartsRef.current[4] = el; }}
             src={getAssetPath("Images/ExploreOurServices_LikeIcon04.webp")}
             alt="Heart Icon 5"
-            className="absolute z-[5]"
+            className="absolute z-[20]"
             style={{ opacity: 0 }}
           />
         </div>
