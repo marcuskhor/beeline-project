@@ -135,7 +135,7 @@ export const ServicesSection = () => {
             <img
               src={getAssetPath("Images/ExploreOurServices_MainPic.webp")}
               alt="Social Media Post"
-              className="w-[400px] h-auto object-cover rounded-[20px]"
+              className="w-[320px] h-auto object-cover rounded-[20px]"
               style={{ boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1), 0 16px 32px rgba(0, 0, 0, 0.15)" }}
             />
             
@@ -151,25 +151,25 @@ export const ServicesSection = () => {
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] floating-bee"
-            style={{ width: "220px", top: "20%", left: "8%" }}
+            style={{ width: "220px", top: "18%", left: "15%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] floating-bee"
-            style={{ width: "200px", top: "-8%", left: "32%" }}
+            style={{ width: "200px", top: "-5%", left: "38%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
             alt="Buzz Bee 3"
             className="absolute z-[15] floating-bee"
-            style={{ width: "210px", top: "5%", right: "8%" }}
+            style={{ width: "210px", top: "8%", right: "12%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz02.gif")}
             alt="Buzz Bee 4"
             className="absolute z-[15] floating-bee"
-            style={{ width: "230px", bottom: "12%", left: "50%", transform: "translateX(-50%)" }}
+            style={{ width: "230px", bottom: "18%", left: "50%", transform: "translateX(-50%)" }}
           />
 
           {/* Floating Hearts - with GSAP animation */}
