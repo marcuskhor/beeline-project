@@ -151,13 +151,13 @@ export const ServicesSection = () => {
             src={getAssetPath("Images/Services_Buzz01.gif")}
             alt="Buzz Bee 1"
             className="absolute z-[15] floating-bee"
-            style={{ width: "220px", top: "8%", right: "12%" }}
+            style={{ width: "220px", top: "-5%", left: "38%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz04.gif")}
             alt="Buzz Bee 2"
             className="absolute z-[15] floating-bee"
-            style={{ width: "200px", top: "-5%", left: "38%" }}
+            style={{ width: "200px", top: "8%", right: "12%" }}
           />
           <img
             src={getAssetPath("Images/Services_Buzz03.gif")}
