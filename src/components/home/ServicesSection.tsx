@@ -251,8 +251,8 @@ export const ServicesSection = () => {
               />
               
               {/* Typing Text Area - positioned below 4891 likes */}
-              <div className="absolute bottom-[4%] md:bottom-[3%] lg:bottom-[3%] left-[8%] w-[84%] text-[0.45rem] md:text-[0.55rem] lg:text-[0.7rem] font-semibold text-foreground leading-[1.4] z-[12]">
-                {displayedText}
+              <div className="absolute bottom-[4%] md:bottom-[3%] lg:bottom-[3%] left-[5%] w-[82%] text-[0.45rem] md:text-[0.55rem] lg:text-[0.7rem] font-semibold text-foreground leading-[1.4] z-[12] min-h-[2.8em]">
+                <span className="whitespace-pre-wrap">{displayedText}</span>
                 <span className="inline-block w-[2px] h-[0.9em] bg-foreground ml-[2px] relative top-[2px] animate-[blink_1s_infinite]" />
               </div>
             </div>
